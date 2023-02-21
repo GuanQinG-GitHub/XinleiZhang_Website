@@ -3,7 +3,11 @@ site_name: Xinlei's Page
 site_url: https://guanqing-github.github.io/personal-wbsite/
 site_author: Xinlei
 site_description: Xinlei's Personal Website
-  
+
+# [Navigation]
+-nv:
+ -Academic Resume: Academic Resume/academic_resume.md
+ -2023 MCM: 2023MCM/2023MCM.md
 # [UI]
 ## [top]
 theme:
