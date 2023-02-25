@@ -1,52 +1,36 @@
 # CH1~3 Introduction and Algorithm Analysis
 
 ## 1 Philosophy
-
-- Improve the **efficiency** of a program
-    
+- Improve the **efficiency** of a program   
     - Shorter running time
     - Less memory
-- Definition: any **data representation** and its associated **operations**
-    
+- Definition: any **data representation** and its associated **operations** 
     - e.g., Integer & Summation, String & Replace
 - Every data structure has costs and benefits; no data structure is better than another in all situations.
-- A data structure requires:
-    
+- A data structure requires: 
     - **Space** for each data item it stores
     - **Time** to perform each basic operation
     - **Programming Effort**
 - Terminology
-    
-    - Type: **a collection of values**
-        
+    - Type: **a collection of values**      
         - e.g., Boolean type and Integer type
-    - Data Type: **a type** and **a collection of operations** that manipulate the type
-        
+    - Data Type: **a type** and **a collection of operations** that manipulate the type     
         - e.g., Integer type and {+,-,\*,/} operations
-    - Data Item: **a piece of information** of a record drawn from a data type
-        
+    - Data Item: **a piece of information** of a record drawn from a data type     
         - e.g., true or false from a Boolean data type
-    - Atomic Data Type: contain no subparts
-        
+    - Atomic Data Type: contain no subparts     
         - e.g., Integer and Boolean
-    - Structure Data Type: contain several pieces of information
-        
+    - Structure Data Type: contain several pieces of information     
         - e.g., Array and String
     - Abstract Data Type: a definition for a data type **solely** in terms of a set of values and a set of operations on that data type.
-    - Data Structure: the **physical implementation** of an ADT
-        
-        [Abstract Data Types - GeeksforGeeks](https://www.geeksforgeeks.org/abstract-data-types/)
-        
-    - Forms of data items
-        
-        - Logical Form: the data defined within ADT
-            
+    - Data Structure: the **physical implementation** of an ADT       
+        [Abstract Data Types - GeeksforGeeks](https://www.geeksforgeeks.org/abstract-data-types/)      
+    - Forms of data items      
+        - Logical Form: the data defined within ADT        
             - e.g., Integers in mathematiacl sense
-        - Physical Form: Implementation of the data item within a data structure
-            
+        - Physical Form: Implementation of the data item within a data structure           
             - e.g., 16/32 bit integers: overflow
     - Problem & Algorithm & program
-
 ## 2 Algorithm Analysis
 - Two criteria
     - Efficiency
