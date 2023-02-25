@@ -47,39 +47,27 @@
             - e.g., 16/32 bit integers: overflow
     - Problem & Algorithm & program
 
-## Algorithm Analysis
-
+## 2 Algorithm Analysis
 - Two criteria
-    
     - Efficiency
-        
         - Empirical Comparison
-            
             - Machine dependent
             - Difficult to setup a baseline
         - Algorithm Analysis
-            
             - Estimate the time and space needed for a program
-                
                 - Growth Rate
                 - Wrost Case
             - Machine Independent
     - Easy to understand
 - Three different measures:
-    
-    - Big-Oh
-        
+    - Big-Oh     
         - the **upper bound** of a growth rate; the **tightest** upper bound is preferred
         - e.g., for sequential search, T(O) is in O(n) and the worst case is n.
-    - Big-Omega
-        
+    - Big-Omega       
         - the **lower bound** of a growth rate
-    - Big-Theta
-        
+    - Big-Theta 
         - when Big-Oh and Big-Omega are the same, this situation is indicated using Big-Theta.
 - Space/Time Tradeoff Principle
-    
     - One can often reduce time if one is willing to sacrifice space, or vice versa.
-        
         - e.g., Encoding or packing information (save space)
         - e.g., Table lookup (save time)
