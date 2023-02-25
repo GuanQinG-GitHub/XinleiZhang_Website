@@ -10,7 +10,9 @@ site_description: Xinlei's Personal Website
  -2023 MCM: 2023MCM/2023MCM.md
  -Data Structure:
   -Introduction: Data Structure/CH1~3 Introduction and Algorithm Analysis.md
+  -List, Stack and Queue: Data Structure/CH4 Lists, Stacks, and Queues.md
   -Binary Tree: Data Structure/CH5 Binary Tree.md
+  
 # [UI]
 ## [top]
 theme:
