@@ -1,3 +1,3 @@
 # personal-website
 
- [Personal Resume](./Resume_Xinlei Zhang.pdf)
+ **Welcome to xinlei's website**
