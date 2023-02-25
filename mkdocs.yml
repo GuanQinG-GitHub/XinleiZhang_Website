@@ -8,7 +8,9 @@ site_description: Xinlei's Personal Website
 -nv:
  -Academic Resume: Academic Resume/academic_resume.md
  -2023 MCM: 2023MCM/2023MCM.md
- -Data Structurea: Data Structure/CH5 Binary Tree.md
+ -Data Structure:
+  -Introduction: Data Structure/CH1~3 Introduction and Algorithm Analysis.md
+  -Binary Tree: Data Structure/CH5 Binary Tree.md
 # [UI]
 ## [top]
 theme:
