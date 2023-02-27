@@ -1,50 +1,36 @@
 # CH4 Lists, Stacks, and Queues
-
 ## 4.1 Lists
-
-- For data which are **finite** and **in order**
-    
+- For data which are **finite** and **in order**    
     - e.g., Student records which store the score for each student
-- Terminology
-    
+- Terminology    
     - Each element has a **data type** (atomic or structure)
     - **Empty list** contains no element
     - The **length** is the number of elements stored
     - The beginning of the list is called the **head**
     - The end of the list is called the **tail**
-- Types
-    
-    - Sorted Lists
-        
+- Types    
+    - Sorted Lists        
         - elements positioned in **ascending or descending order** of value
-    - Unsorted Lists
-        
+    - Unsorted Lists        
         - **No necessary relationship** between element values and positions
-- Functions
-    
+- Functions    
     - Get value, Insert, Modify, Delete, Search
 - ADT
-- Different Physical Forms
-    
-    - Array-Based List
-        
+- Different Physical Forms    
+    - Array-Based List        
         - private: maxSize, listSize, fence, \*listArray
         - Insert: listArray[fence] = item
         - Set Position: fence = pos
-        - Get Value: it = listArray[fence]
-            
+        - Get Value: it = listArray[fence]            
             - rightLength = listSize - fence
             - leftLength = fence
         - Append: listArray[listSize++] = item
         - Remove, SetStart, setEnd, prev, next, print
-        - Disadvantages:
-            
+        - Disadvantages:           
             - **No overhead** if all array positions are full
             - Array must be allocated in advance
-    - Linked-List
-        
-        - private: element, \* next,\* head, \*, tail, \* fence, leftcnt, rightcnt
-            
+    - Linked-List        
+        - private: element, \* next,\* head, \*, tail, \* fence, leftcnt, rightcnt            
             - leftcnt + rightcnt = length
         - Insert: fence->next = new Link<Elem>(item, fence->next)
         - Set Position: move fence from head
@@ -54,76 +40,55 @@
         - setStart, setEnd, next, print
         - prev: no idea where fence is, traversal from head
         - Freelist
-    - Comparison
-        
-        - Array-Based Lists
-            
+    - Comparison     
+        - Array-Based Lists          
             - Insertion and deletion are **Big-Theta(n)**
             - Prev and direct access are **Big-Theta(1)**
             - Array must be **allocated in advance**
             - **No overhead** if all array positions are full
-        - Linked Lists
-            
+        - Linked Lists          
             - Insertion and deletion are **Big-Theta(1)**
             - Prev and direct access are **Big-Theta(n)**
             - **Space grows** with number of elements
             - Every element **requires overhead**
     - Double linked list
-
 ## 4.2 Stacks
-
-- Restricted form of a List
-    
+- Restricted form of a List  
     - Insert only at the front
     - Remove from the front
     - **First-In-Last-Out (FILO)**
-- Notation
-    
+- Notation 
     - Insert: **PUSH**
     - Remove: **POP**
     - The accessible element is called **TOP**
-- Different physical form
-    
-    - Array-Based Stack
-        
+- Different physical form 
+    - Array-Based Stack      
         - private: maxSize, top, \* listArray
         - Push: listArray[top++] = it
         - Pop: it = listArray[--top]
-    - Linked Stack
-        
+    - Linked Stack    
         - link \* top, size
         - Push: top = new Link<Elem>(it,top)
         - Pop: Link<Elem>\* ltemp = top->next; delete top; top = ltemp;
-
 ## 4.3 Queues
-
-- Restricted form of a list
-    
+- Restricted form of a list    
     - Insert at one end
     - Remove from the other end
     - **First-In-First-Out (FIFO)**
-- Notation
-    
+- Notation  
     - Insert: **Enqueue**
     - Delete: **Dequeue**
     - First Element: **Front**
     - Last Element: **Rear**
-- Different physical form
-    
-    - Array-Based Queue
-        
+- Different physical form    
+    - Array-Based Queue      
         - private: size, front, rear, \* listArray
         - enqueue: listArray[rear] = it
         - dequqeq: it = listArray[front]; front = front + 1
-        - One problem  
-            [image]
-            
-            One solution: Circular Queue
-            
-            [Introduction and Array Implementation of Circular Queue - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-and-array-implementation-of-circular-queue/)
-            
-    - Linked Queue
-        
+        - One problem: the queue is full although some memory spaces are available.   
+            One solution: Circular Queue            
+            [Introduction and Array Implementation of Circular Queue - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-and-array-implementation-of-circular-queue/)            
+    - Linked Queue       
         - private: link \* front, link \* rear, size
         - enqueue: rear->next = new link; rear = rear->next
         - dequeue: front = front->next;
