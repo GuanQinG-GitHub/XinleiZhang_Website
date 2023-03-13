@@ -24,6 +24,11 @@ theme:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.pathconverter:
+      base_path: 'personal-website/docs/Academic Resume/Resume_Xinlei Zhang.pdf' # default: ''
+      relative_path: '' # default ''
+      absolute: true # default: false
+#      tags: 'a script img link object embed'
 
 extra_javascript:
   # latex支持
