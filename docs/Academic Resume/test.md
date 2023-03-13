@@ -1,5 +1,5 @@
-<!--- file: docs/Academic Resume/test.md --->
-{% with pdf_file = "Academic Resume/Resume_Xinlei Zhang.pdf" %}
+<!--- file: /docs/Academic Resume/test.md --->
+{% with pdf_file = "/Academic Resume/Resume_Xinlei Zhang.pdf" %}
 
 {% set solid_filepdf = '<i class="fas fa-file-pdf"></i>' %}
 {% set empty_filepdf = '<i class="far fa-file-pdf"></i>' %}
