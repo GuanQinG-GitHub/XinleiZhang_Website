@@ -24,9 +24,9 @@ theme:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.pathconverter:
-      base_path: ./ # default: ''
-      relative_path: docs # default ''
+#  - pymdownx.pathconverter:
+#      base_path: ./ # default: ''
+#      relative_path: docs # default ''
 #      absolute: true # default: false
 #      tags: 'a script img link object embed'
 
