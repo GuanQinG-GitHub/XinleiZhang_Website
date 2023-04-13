@@ -66,7 +66,7 @@
     where $k_n$ is the thermal conductivity along a certain direction $\bold{n}$. If the material is isotropic, which means that the thermal conductivity is the same in all direction, $k_x=k_y=k_z=k_{any~direction}=k$. Hence, equation above can be rewritten as
     
     $$
-    q''=q_x''\bold{i}+q_y''\bold{j}+q_z''\bold{k}\\q_x''=-k\frac{\partial T}{\partial x},~q_y''=-k\frac{\partial T}{\partial y},~q_z''=-k\frac{\partial T}{\partial z}
+    q''=q_x''\rm{i}+q_y''\rm{j}+q_z''\rm{k}\\q_x''=-k\frac{\partial T}{\partial x},~q_y''=-k\frac{\partial T}{\partial y},~q_z''=-k\frac{\partial T}{\partial z}
     $$
     
 
