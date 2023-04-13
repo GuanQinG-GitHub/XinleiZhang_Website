@@ -31,7 +31,7 @@
         
         These four items represent the rate of change of energy (Power).
         
-        ![Week7-1.png](/Week7-1.png)
+        ![Week7-1.png](Week7-1.png)
         
     - Internal Energy
 
