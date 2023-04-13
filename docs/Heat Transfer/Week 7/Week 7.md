@@ -31,7 +31,7 @@
         
         These four items represent the rate of change of energy (Power).
         
-        ![Week7-1.png](Week%207%2075921e5cab724917bb9ec8a340c263fb/Week7-1.png)
+        ![Week7-1.png](/Week7-1.png)
         
     - Internal Energy
 
@@ -80,7 +80,7 @@
     
     In a control volume, a cubic with volume $dxdydz$ as shown below,
     
-    ![Week7-3.png](Week%207%2075921e5cab724917bb9ec8a340c263fb/Week7-3.png)
+    ![Week7-3.png](/Week7-3.png)
     
      From the first law of thermodynamics (Conservation of energy),
     
