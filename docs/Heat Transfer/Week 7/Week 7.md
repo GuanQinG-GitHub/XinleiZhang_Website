@@ -47,7 +47,7 @@
     
     where $q_x$ is the heat transfer rate with the unit in W (Watt). $k$ is a constant and varies from materials, defined as thermal conductivity. $\Delta T$ and $\Delta x$ are the temperature difference and the length between two points. $A$ is the cross-sectional area, which is perpendicular to the direction of $\Delta x$. In this equation, $\Delta T$ and $\Delta x$ are scalar and positive (direction-less), which gives a positive $q_x$, since heat transfer rate measures power.
     
-    ![Illustration for Fourier's Law](/Week7-2.png)
+    ![Illustration for Fourier's Law](Week7-2.png)
     
 - In contrast, heat flux $q_x''$ is defined as a vector quantity.
     
@@ -80,7 +80,7 @@
     
     In a control volume, a cubic with volume $dxdydz$ as shown below,
     
-    ![Week7-3.png](/Week7-3.png)
+    ![Week7-3.png](Week7-3.png)
     
      From the first law of thermodynamics (Conservation of energy),
     
