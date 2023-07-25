@@ -1,3 +1,3 @@
-# personal-website
+# Personal-Website
 
  **Welcome to xinlei's website**
