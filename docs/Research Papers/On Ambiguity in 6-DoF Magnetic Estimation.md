@@ -1,2 +1,2 @@
 ### Paper
-[Click here to preview the first two pages of the manuscript](On Ambiguity in 6-DoF Magnetic Estimation (The first two pages).pdf)
+[Click here to preview the first two pages of the manuscript](On_Ambiguity_in_6-DoF_Magnetic_Estimation_(The_first_two_pages).pdf)
