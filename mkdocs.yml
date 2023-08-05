@@ -23,8 +23,8 @@ site_description: Xinlei's Personal Website
   -Lecture Summary 1: Classical Control Theory/Lecture Summary 1.md
  -Heat Transfer:
   -Week 7: Heat Transfer/Week 7/Week 7.md
- -Research Papers:
-  -Magnetic Estimation: On Ambiguity in 6-DoF Magnetic Estimation.md
+ -Research_Papers:
+  -Magnetic Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
   
 # [UI]
 ## [top]
