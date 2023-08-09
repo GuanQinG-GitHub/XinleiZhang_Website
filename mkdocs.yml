@@ -11,10 +11,10 @@ nav:
    - System Dynamics: 
      - Review Outline: Course_Notes/System_Dynamics/Review_Outline.md
    - Data Structure:
-     - Introduction: Course_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
+     - Introduction and Algorithm: Course_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
      - List, Stack and Queue: Course_Notes/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
      - Binary Tree: Course_Notes/Data_Structure/CH_5_Binary_Tree.md
-     - Overall: Course_Notes/Data_Structure/CH_7_Internal_Sorting.md
+     - Internal Sorting: Course_Notes/Data_Structure/CH_7_Internal_Sorting.md
    - Classical Control Theory: 
      - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
    - Heat Transfer:
