@@ -34,6 +34,8 @@ nav:
 
  - Project:
    - Projects/index.md
+   - SharpShooters: Projects/SharpShooters.md
+   - PPP: Projects/PPP/PPP.md
  
  - Research Papers:
    - Research_Papers/index.md
