@@ -1,4 +1,4 @@
-# CH5 Binary Tree
+# CH 5 Binary Tree
 ## 5.1 Recursion
 - Definition: A procedure which calls itself
 - Two elements:
