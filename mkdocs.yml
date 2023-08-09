@@ -6,24 +6,28 @@ site_description: Xinlei's Personal Website
 
 # [Navigation]
 -nv:
- -Academic Resume:
-  -Resume: Academic Resume/academic_resume.md
-#  -test: Academic Resume/test.md
- -2023 MCM: 2023MCM/2023MCM.md
- -System Dynamics: System Dynamics/Review Outline for System Dynamics.md
- -Data Structure:
-  -Introduction: Data Structure/CH1~3 Introduction and Algorithm Analysis.md
-  -List, Stack and Queue: Data Structure/CH4 Lists, Stacks, and Queues.md
-  -Binary Tree: Data Structure/CH5 Binary Tree.md
-  -Overall: Data Structure/CH 7 Internal Sorting.md
+ -Course Notes:
+  -System Dynamics: System Dynamics/Review Outline for System Dynamics.md
+  -Data Structure:
+   -Introduction: Data Structure/CH1~3 Introduction and Algorithm Analysis.md
+   -List, Stack and Queue: Data Structure/CH4 Lists, Stacks, and Queues.md
+   -Binary Tree: Data Structure/CH5 Binary Tree.md
+   -Overall: Data Structure/CH 7 Internal Sorting.md
+  -Classical Control Theory: 
+   -Lecture Summary 1: Classical Control Theory/Lecture Summary 1.md
+  -Heat Transfer:
+   -Week 7: Heat Transfer/Week 7/Week 7.md
+   
+ -Award & Honor:
+  -2023 MCM: 2023MCM/2023MCM.md
+
  -Speech Notes:
   -SYS20230316: Speech/[SYS20230316]Notes.md
   -SYS20230406: Speech/[SYS20230406]Notes.md
- -Classical Control Theory: 
-  -Lecture Summary 1: Classical Control Theory/Lecture Summary 1.md
- -Heat Transfer:
-  -Week 7: Heat Transfer/Week 7/Week 7.md
- -Research_Papers:
+  
+ -CV: Academic Resume/academic_resume.md
+ 
+ -Research Papers:
   -Magnetic Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
   
 # [UI]
