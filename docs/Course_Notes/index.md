@@ -1,1 +1,1 @@
-index.md for course notes
+This column records many course notes, categorized by courses.
