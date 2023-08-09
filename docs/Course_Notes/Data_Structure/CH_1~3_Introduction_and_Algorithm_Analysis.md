@@ -1,4 +1,4 @@
-# CH1~3 Introduction and Algorithm Analysis
+# CH 1~3 Introduction and Algorithm Analysis
 
 ## 1 Philosophy
 - Improve the **efficiency** of a program   
