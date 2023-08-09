@@ -67,7 +67,7 @@ theme:
 # [Extension]
 markdown_extensions:
   - attr_list
-  - md_in_heml
+  - md_in_html
   - pymdownx.arithmatex:
       generic: true
  # - pymdownx.pathconverter:
