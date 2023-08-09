@@ -1,3 +1,3 @@
 # Home
 
-Hello to Xinlei's Website!
+Welcome to Xinlei's Website!
