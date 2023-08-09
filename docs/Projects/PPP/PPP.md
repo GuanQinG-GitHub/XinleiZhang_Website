@@ -5,3 +5,13 @@ This web page is maintained for sharing the project materials in Big Data Analyt
 
 ## Report
 [Click here to download the pdf form of our report.](Project_2_Report_PPP.pdf)
+
+<figure markdown>
+  ![](PPP_system_overall.jpg){ width="500" }
+  <figcaption>System Overview</figcaption>
+</figure>
+
+<figure markdown>
+  ![](PPP_motion_illustration.jpg){ width="500" }
+  <figcaption>Correct vs Wrong Motion</figcaption>
+</figure>
