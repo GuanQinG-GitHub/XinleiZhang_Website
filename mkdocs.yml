@@ -5,7 +5,7 @@ site_author: Xinlei
 site_description: Xinlei's Personal Website
 
 # [Navigation]
-nv:
+nav:
  - Course Notes:
    - Course_Notes/index.md
    - System Dynamics: 
