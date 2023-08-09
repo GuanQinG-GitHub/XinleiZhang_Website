@@ -1,1 +1,1 @@
-index.md for speech
+This column records notes in academic speeches/lectures.
