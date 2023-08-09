@@ -1,3 +1,3 @@
-# personal-website
+# Personal Website
 
-Hello to Xinlei's Website
+Hello to Xinlei's Website!
