@@ -1,4 +1,4 @@
-# CH4 Lists, Stacks, and Queues
+# CH 4 Lists, Stacks, and Queues
 ## 4.1 Lists
 - For data which are **finite** and **in order**    
     - e.g., Student records which store the score for each student
