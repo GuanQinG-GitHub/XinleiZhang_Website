@@ -1,1 +1,1 @@
-# This page records all the award cerificates
+# This page records all the award cetificates
