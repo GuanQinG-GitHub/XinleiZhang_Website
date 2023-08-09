@@ -31,6 +31,9 @@ nav:
   
  - CV: 
    - CV/index.md
+
+ - Project:
+   - Projects/index.md
  
  - Research Papers:
    - Research_Papers/index.md
