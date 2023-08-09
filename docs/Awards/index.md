@@ -7,6 +7,6 @@ This column records award cetificates.
 </figure>
 
 <figure markdown>
-  ![Image title](2023MCM/2023MCM.jpg){ width="600" }
+  ![Image title](2023MCM/2023MCM.jpg){ width="500" }
   <figcaption>Image caption</figcaption>
 </figure>
