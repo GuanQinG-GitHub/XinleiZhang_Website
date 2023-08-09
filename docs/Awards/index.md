@@ -7,8 +7,8 @@ This column records award cetificates.
 </figure>
 
 <figure markdown>
-  ![](Alibaba_Cuo_Programming/Alibaba_Programming_Cup.jpg){ width="500" }
-  <figcaption>Alibaba Cloud Programming Cup, Third-Class</figcaption>
+  ![](Alibaba_Cup_Programming/Alibaba_Programming_Cup.jpg){ width="500" }
+  <figcaption>Alibaba Cloud Programming Cup, Third-Class Award</figcaption>
 </figure>
 
 <figure markdown>
@@ -18,12 +18,12 @@ This column records award cetificates.
 
 <figure markdown>
   ![](Micro_Sensing_Contest/Micro_Sensing_Contest_1.jpg){ width="500" }
-  <figcaption>Micro Sensing and Intelligent Technology Contest, National First Prize</figcaption>
+  <figcaption>Micro Sensing & Intelligent Technology Contest, National First Prize</figcaption>
 </figure>
 
 <figure markdown>
   ![](Micro_Sensing_Contest/Micro_Sensing_Contest.jpg){ width="500" }
-  <figcaption>Micro Sensing and Intelligent Technology Contest, Excellent Defense</figcaption>
+  <figcaption>Micro Sensing & Intelligent Technology Contest, Excellent Defense</figcaption>
 </figure>
 
 <figure markdown>
