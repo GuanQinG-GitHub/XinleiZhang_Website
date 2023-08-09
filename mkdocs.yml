@@ -9,16 +9,16 @@ nv:
  - Course Notes:
    - Course_Notes/index.md
    - System Dynamics: 
-     - Review Outline: Couse_Notes/System_Dynamics/Review_Outline.md
+     - Review Outline: Course_Notes/System_Dynamics/Review_Outline.md
    - Data Structure:
-     - Introduction: Couse_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
-     - List, Stack and Queue: Couse_Notes/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
-     - Binary Tree: Couse_Notes/Data_Structure/CH_5_Binary_Tree.md
-     - Overall: Couse_Notes/Data_Structure/CH_7_Internal_Sorting.md
+     - Introduction: Course_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
+     - List, Stack and Queue: Course_Notes/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
+     - Binary Tree: Course_Notes/Data_Structure/CH_5_Binary_Tree.md
+     - Overall: Course_Notes/Data_Structure/CH_7_Internal_Sorting.md
    - Classical Control Theory: 
-     - Lecture Summary 1: Couse_Notes/Classical_Control_Theory/Lecture_summary_1.md
+     - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
    - Heat Transfer:
-     - Week 7: Couse_Notes/Heat_Transfer/Week_7.md
+     - Week 7: Course_Notes/Heat_Transfer/Week_7.md
    
  - Award & Honor:
    - Awards/index.md
