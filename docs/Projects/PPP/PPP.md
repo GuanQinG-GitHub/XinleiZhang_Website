@@ -17,7 +17,10 @@ components as new features feeding into machine learning models. We ensemble ANN
 <figure markdown>
   ![](PPP_system_overall.jpg){ width="600" }
   <figcaption>Project Overview</figcaption>
-</figure>
+</figure>  
+
+- Motion Recognition is used to recognize the motion for forehand counter and backhand drive.
+- Faulty Motion Detection is used to detect the wrong wrist motion in backhand drive.
 
 <figure markdown>
   ![](Forehand_counter.gif){ width="500" }
@@ -31,5 +34,5 @@ components as new features feeding into machine learning models. We ensemble ANN
 
 <figure markdown>
   ![](PPP_motion_illustration.jpg){ width="500" }
-  <figcaption>Correct and wrong wrist motion, both of which can be recognized by OCSVM and LoF techniques.</figcaption>
+  <figcaption>Correct and Wrong Wrist Motion in Backhand Drive</figcaption>
 </figure>
