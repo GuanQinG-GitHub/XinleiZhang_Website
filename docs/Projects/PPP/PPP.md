@@ -15,17 +15,18 @@ components as new features feeding into machine learning models. We ensemble ANN
 ## Overview
 
 <figure markdown>
-  ![](PPP_system_overall.jpg){ width="500" }
+  ![](PPP_system_overall.jpg){ width="600" }
   <figcaption>Project Overview</figcaption>
 </figure>
-dsds
-![](Forehand_counter.gif)  
-dssd
-![](Backhand_drive.gif)
+
+<figure markdown>
+  ![](Forehand_counter.gif){ width="500" }
+  <figcaption>Motion for Forehand Counter</figcaption>
+</figure>
 
 <figure markdown>
   ![](Backhand_drive.gif){ width="500" }
-  <figcaption>Backhand Drive</figcaption>
+  <figcaption>Motion for Backhand Drive</figcaption>
 </figure>
 
 <figure markdown>
