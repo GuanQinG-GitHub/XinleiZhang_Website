@@ -42,7 +42,7 @@ nav:
  
  - Research Papers:
    - Research_Papers/index.md
-   - Magnetic Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
+   - On Ambiguity in Magnetic Pose Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
   
 # [UI]
 ## [top]
