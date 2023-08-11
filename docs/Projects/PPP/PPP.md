@@ -16,7 +16,7 @@ components as new features feeding into machine learning models. We ensemble ANN
 
 ![](forehand_drive.gif)
 sdss
-![]([backhand_stroke.gif](https://juliadynamics.github.io/JuliaDynamics/videos/billiards/DynamicalBilliards_logo_animated.gif)
+![](https://juliadynamics.github.io/JuliaDynamics/videos/billiards/DynamicalBilliards_logo_animated.gif)
 
 
 <figure markdown>
