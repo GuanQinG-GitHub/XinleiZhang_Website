@@ -1,5 +1,5 @@
 # Curriculum Vitae
 
-[Click here to download the pdf form of my CV](CV_PhD_application-20231011.pdf).
+[Click here to view the pdf form of my CV]([PhD_Application]CV_Xinlei.pdf).
 
-Last update on the CV: 2023-08-11.
+Last update on the CV: 2023-11-01.
