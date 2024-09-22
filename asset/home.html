@@ -50,6 +50,28 @@
     #    border-radius: 50%; /* This makes the image circular */
     }
 
+    .biography-section {
+        background-color: #f5f5f5;
+        padding: 2rem 0;
+    }
+
+    .biography-content {
+        max-width: 61rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .biography-section h2 {
+        color: var(--md-primary-bg-color);
+        margin-bottom: 1rem;
+    }
+
+    .biography-section p {
+        color: var(--md-primary-bg-color);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
     @media screen and (max-width:30em) {
         .tx-hero h1 {
             font-size: 1.4rem
@@ -114,6 +136,27 @@
     </div>
 </section>
 
+<!-- Biography Section -->
+<section class="biography-section">
+    <div class="biography-content">
+        <h2>Biography</h2>
+        <p>
+          Hello! I'm [Your Name], a [Your Profession/Field] based in [Your Location]. 
+          With over [X] years of experience in [Your Area of Expertise], I've dedicated my career to [Your Main Focus or Goal].
+        </p>
+        <p>
+          My journey began [Brief Background]. Throughout my career, I've had the opportunity to [Major Achievements or Experiences].
+          I'm particularly passionate about [Specific Interests or Specializations within Your Field].
+        </p>
+        <p>
+          When I'm not [Working/Studying], you can find me [Hobbies or Personal Interests]. 
+          I believe in [Personal Philosophy or Professional Motto], and I'm always eager to [Learning Goals or Future Aspirations].
+        </p>
+        <p>
+          Feel free to explore my work and get in touch if you'd like to collaborate or just have a chat about [Your Field/Interests]!
+        </p>
+    </div>
+</section>
 <!-- Toggleable JavaScript execution -->
 {%- if config.home_execute_js -%}
 <script>
