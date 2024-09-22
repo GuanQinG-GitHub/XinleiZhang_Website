@@ -50,7 +50,7 @@ nav:
 
 # Custom Homepage Elements
 home_cover_image: MainPage/Profile_Xinlei%20-%20Circle.png # This path starts at your root mkdocs directory.
-home_cover_image_size: 12.5  # 200px / 16 = 12.5rem
+home_cover_image_size: 15  # 200px / 16 = 12.5rem
 home_tagline: Xinlei Zhang
 home_description: Hi, I'm a first year PhD student in North Carolina State University.
 
