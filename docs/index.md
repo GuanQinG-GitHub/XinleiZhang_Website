@@ -1,3 +1,4 @@
-# Home
-
-Welcome to Xinlei's Website!
+---
+template: home.html
+title: Home
+---
