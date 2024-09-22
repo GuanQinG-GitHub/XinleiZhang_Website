@@ -51,8 +51,7 @@ nav:
 # Custom Homepage Elements
 home_cover_image: MainPage/Profile_Xinlei.jpg # This path starts at your root mkdocs directory.
 home_tagline: Xinlei Zhang
-home_description: |
-  Hi
+home_description: Hi
   
 theme:
   name: material
