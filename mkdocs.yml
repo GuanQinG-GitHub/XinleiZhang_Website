@@ -49,14 +49,14 @@ nav:
 ## [top]
 
 # Custom Homepage Elements
-#home_cover_image: attachments/wizard-posting.png # This path starts at your root mkdocs directory.
-#home_tagline: Shadow Wizards Only
-#home_description: |
-#  This site is an example showcase for my "mkdocs-coverpage" repository.
+home_cover_image: docs/MainPage/Profile_Xinlei.jpg # This path starts at your root mkdocs directory.
+home_tagline: Xinlei Zhang
+home_description: |
+  Hi
   
 theme:
   name: material
-#  custom_dir: assets # Contains custom 'home.html' coverpage (and 'main.html')
+  custom_dir: asset # Contains custom 'home.html' coverpage (and 'main.html')
   
   palette:
     - scheme: default # 日间模式
@@ -71,6 +71,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: 切换至日间模式
+        
   features:
     - navigation.tabs # 使用Tab来进行分类
     - navigation.top # 返回顶部的按钮 在上滑时出现
