@@ -47,8 +47,17 @@ nav:
   
 # [UI]
 ## [top]
+
+# Custom Homepage Elements
+#home_cover_image: attachments/wizard-posting.png # This path starts at your root mkdocs directory.
+#home_tagline: Shadow Wizards Only
+#home_description: |
+#  This site is an example showcase for my "mkdocs-coverpage" repository.
+  
 theme:
   name: material
+#  custom_dir: assets # Contains custom 'home.html' coverpage (and 'main.html')
+  
   palette:
     - scheme: default # 日间模式
       primary: indigo # 上方的
