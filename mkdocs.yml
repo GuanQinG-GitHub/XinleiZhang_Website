@@ -11,23 +11,26 @@ site_description: Xinlei's Personal Website
 nav:
  - Course Notes:
    - Course_Notes/index.md
-   - System Dynamics: 
-     - Review Outline: Course_Notes/System_Dynamics/Review_Outline.md
-   - Data Structure:
-     - Introduction and Algorithm: Course_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
-     - List, Stack and Queue: Course_Notes/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
-     - Binary Tree: Course_Notes/Data_Structure/CH_5_Binary_Tree.md
-     - Internal Sorting: Course_Notes/Data_Structure/CH_7_Internal_Sorting.md
-   - Classical Control Theory: 
-     - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
-   - Heat Transfer:
-     - Week 7: Course_Notes/Heat_Transfer/Week_7.md
+   - SCUT:
+     - System Dynamics: 
+       - Review Outline: Course_Notes/System_Dynamics/Review_Outline.md
+     - Data Structure:
+       - Introduction and Algorithm: Course_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
+       - List, Stack and Queue: Course_Notes/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
+       - Binary Tree: Course_Notes/Data_Structure/CH_5_Binary_Tree.md
+       - Internal Sorting: Course_Notes/Data_Structure/CH_7_Internal_Sorting.md
+     - Classical Control Theory: 
+       - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
+     - Heat Transfer:
+       - Week 7: Course_Notes/Heat_Transfer/Week_7.md
+   - NCSU:
+     - MAE 405: NCSU/MAE_405_2024_Fall/MAE405.md
    
  - Award & Honor:
    - Awards/index.md
    - 2023 MCM: Awards/2023MCM/2023MCM.md
 
- - Speech Notes:
+ - Talk Notes:
    - Speech/index.md
    - SYS20230316: Speech/[SYS20230316]Notes.md
    - SYS20230406: Speech/[SYS20230406]Notes.md
@@ -41,7 +44,7 @@ nav:
    - SharpShooters: Projects/SharpShooters.md
    - PPP: Projects/PPP/PPP.md
  
- - Research Papers:
+ - Research:
    - Research_Papers/index.md
    - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
   
