@@ -1,4 +1,4 @@
 # Publications
 
-This column records my research papers.
+This page collects my publications.
 
