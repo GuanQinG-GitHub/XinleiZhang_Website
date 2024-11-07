@@ -1,5 +1,5 @@
 # Curriculum Vitae
 
-[Click here to view the pdf form of my CV]([PhD][CV][20231120]Xinlei.pdf).
+[Click here to view the pdf form of Xinlei's CV](CV_Xinlei_11_06_2024.pdf).
 
-Last update on the CV: 2023-11-20.
+Latest update: 11-06-2024
