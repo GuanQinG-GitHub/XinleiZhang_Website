@@ -11,7 +11,11 @@ site_description: Xinlei's Personal Website
 nav:
  - Course Notes:
    - Course_Notes/index.md
- #  - SCUT:
+   - NCSU:
+     - MAE 405 Controls Lab: NCSU/MAE_405_2024_Fall/MAE405.md
+#     - MAE 589-06 Optimal Control and Reinforcement Learning:
+#     - DSC 595-02 LLM:
+    #  - SCUT:
  #    - System Dynamics: 
  #      - Review Outline: Course_Notes/System_Dynamics/Review_Outline.md
  #   - Data Structure:
@@ -23,11 +27,7 @@ nav:
  #      - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
  #    - Heat Transfer:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md
-   - NCSU:
-     - MAE 405 Controls Lab: NCSU/MAE_405_2024_Fall/MAE405.md
-     - MAE 589-06 Optimal Control and Reinforcement Learning:
-     - DSC 595-02 LLM:
-   
+ 
  - Award & Honor:
    - Awards/index.md
    - 2023 MCM: Awards/2023MCM/2023MCM.md
