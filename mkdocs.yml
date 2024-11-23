@@ -11,20 +11,22 @@ site_description: Xinlei's Personal Website
 nav:
  - Course Notes:
    - Course_Notes/index.md
-   - SCUT:
-     - System Dynamics: 
-       - Review Outline: Course_Notes/System_Dynamics/Review_Outline.md
-     - Data Structure:
-       - Introduction and Algorithm: Course_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
-       - List, Stack and Queue: Course_Notes/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
-       - Binary Tree: Course_Notes/Data_Structure/CH_5_Binary_Tree.md
-       - Internal Sorting: Course_Notes/Data_Structure/CH_7_Internal_Sorting.md
-     - Classical Control Theory: 
-       - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
-     - Heat Transfer:
-       - Week 7: Course_Notes/Heat_Transfer/Week_7.md
+ #  - SCUT:
+ #    - System Dynamics: 
+ #      - Review Outline: Course_Notes/System_Dynamics/Review_Outline.md
+ #   - Data Structure:
+ #      - Introduction and Algorithm: Course_Notes/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
+ #      - List, Stack and Queue: Course_Notes/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
+ #      - Binary Tree: Course_Notes/Data_Structure/CH_5_Binary_Tree.md
+ #      - Internal Sorting: Course_Notes/Data_Structure/CH_7_Internal_Sorting.md
+ #    - Classical Control Theory: 
+ #      - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
+ #    - Heat Transfer:
+ #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md
    - NCSU:
-     - MAE 405: NCSU/MAE_405_2024_Fall/MAE405.md
+     - MAE 405 Controls Lab: NCSU/MAE_405_2024_Fall/MAE405.md
+     - MAE 589-06 Optimal Control and Reinforcement Learning:
+     - DSC 595-02 LLM:
    
  - Award & Honor:
    - Awards/index.md
