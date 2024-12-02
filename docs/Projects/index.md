@@ -1,3 +1,3 @@
 # Projects
 
-This column records projects involving Xinlei.
+Here are the non-research projects.
