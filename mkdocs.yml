@@ -27,7 +27,18 @@ nav:
  #      - Lecture Summary 1: Course_Notes/Classical_Control_Theory/Lecture_summary_1.md
  #    - Heat Transfer:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md
+ - Project Library:
+   - Projects/index.md
+   - SharpShooters: Projects/SharpShooters.md
+   - PPP: Projects/PPP/PPP.md
  
+ - Research:
+   - Research_Papers/index.md
+   - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
+
+ - CV: 
+   - CV/index.md
+
  - Award & Honor:
    - Awards/index.md
    - 2023 MCM: Awards/2023MCM/2023MCM.md
@@ -37,18 +48,7 @@ nav:
    - SYS20230316: Speech/[SYS20230316]Notes.md
    - SYS20230406: Speech/[SYS20230406]Notes.md
    - 0626Talk: Speech/0626_talk_Xinlei.md
-  
- - CV: 
-   - CV/index.md
 
- - Project:
-   - Projects/index.md
-   - SharpShooters: Projects/SharpShooters.md
-   - PPP: Projects/PPP/PPP.md
- 
- - Research:
-   - Research_Papers/index.md
-   - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
   
 # [UI]
 ## [top]
