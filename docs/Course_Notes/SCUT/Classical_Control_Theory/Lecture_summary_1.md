@@ -1,23 +1,21 @@
 # Lecture Review 1
 
-# What’s control system and why control system?
+## What’s control system and why control system?
 
 ## History of control problem
 
-# How to design a control system
+## How to design a control system
 
-## Step 1: Modeling a system/process/plant
+### Step 1: Modeling a system/process/plant
 
-### Modeling method 1: Modeling Mathematically
+> What is a system/process/plant?
+
+#### Modeling method 1: Modeling Method in Mathematics
 
 For a real world object, process or anything we want to control, we call it a system. For a system, we can describe it mathematically, i.e. using equations to represent the system. Three examples are given as follows.
 
 - Example 1: for a classical physical system, we can model it using Newton’s laws, e.g., $m\ddot{x}+c\dot{x}+kx=u.$
-- Example 2: for an electrical system, we can model it using Ohm’s law and Kirchhoff’s laws, e.g.,
-    
-    $$
-    \begin{cases} \\\end{cases}
-    $$
+- Example 2: for an electrical system, we can model it using Ohm’s law and Kirchhoff’s laws,
     
 - Example 3: for a fluid system,
 
@@ -36,7 +34,7 @@ A system is called a linear system if the **principle of superposition** applies
 
 ##### Time varying system vs Time invariant system
 
-A time invariant system is described by an equation whose coefficients are all constants, not the function of time. In the opposite, at least one coefficient is the function of time in the equation describing a time varying system. The rising of a rocket is a typical example of time varying system.
+A time invariant system is described by an equation whose coefficients are all constants, not the function of time. In the opposite, at least one coefficient is the function of time in the equation describing a time varying system. The rising of a rocket is a typical example of time varying system (varying mass due to ejection and combustion).
 
 ##### Continuous system vs Discrete system
 
@@ -46,18 +44,21 @@ If we concern several quantities in a system, we may want the system to have mul
 
 #### Modeling methods in control theory
 
-##### Transfer Function
+##### Modeling method 1: Transfer Function
 
-### Modeling method 2: System Identification
+##### Modeling method 2: System Identification
 
-### Modeling method 3: Computer-aided
+##### Modeling method 3: Computer-aided
 
-## Step 2: Evaluate the modeled system
+### Step 2: Evaluate the modeled system
 
-### Evaluation aspect 1: Response
+#### Evaluation aspect 1: Response
 
-### Evaluation aspect 2: Stability
+#### Evaluation aspect 2: Stability
 
-### Evaluation aspect 3: Controllability
+#### Evaluation aspect 3: Controllability
 
-### Evaluation aspect 4: Observability
+#### Evaluation aspect 4: Observability
+
+## References
+[1] 
