@@ -31,7 +31,8 @@ nav:
        - Lecture Summary 1: Course_Notes/SCUT/Classical_Control_Theory/Lecture_summary_1.md
  #    - Heat Transfer:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md 
-
+   - Others:
+     - Git: Course_Notes/Others/how_to_use_git.md
  - Project Library:
    - Projects/index.md
    - SharpShooters: Projects/SharpShooters.md
@@ -103,11 +104,18 @@ markdown_extensions:
   - md_in_html
   - pymdownx.arithmatex:
       generic: true
- # - pymdownx.pathconverter:
- #     base_path: 'personal-website' # default: ''
- #     relative_path: '' # default ''
- #     absolute: true # default: false
- #     tags: 'a script img link object embed'
+  - pymdownx.highlight:
+      # 显示行号
+      linenums: true
+      # 显示编程语言名称
+      auto_title: true
+      # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.line_spans
+      line_spans: __span
+      # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.pygments_lang_class
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 extra_javascript:
   # latex支持
