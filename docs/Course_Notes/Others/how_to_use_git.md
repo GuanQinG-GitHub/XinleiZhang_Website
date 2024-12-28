@@ -18,5 +18,10 @@
     ```sh
     git push origin main # push the local repo to the main branch in the remote repo
     ```
- 
+
+***Other Commands***
+```sh
+git remote # show the name of the local cloned repo
+git status # show the editing status of Stage, local repo
+```
 
