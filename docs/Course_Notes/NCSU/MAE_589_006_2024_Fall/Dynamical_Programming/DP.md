@@ -17,7 +17,7 @@
 ### Example: double integrator
 
 #### Results
-
+Video demo of the motion of the double integrator, with grid dimension 201*201
 <video controls>
 <source src="../Animation_of_double_integrator(201*201).mp4" type="video/mp4">
 </video>

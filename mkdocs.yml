@@ -13,12 +13,13 @@ nav:
    - Course_Notes/index.md
    - NCSU:
      - MAE 405 Controls Lab: Course_Notes/NCSU/MAE_405_2024_Fall/MAE405.md
-     - MAE 589-06 Optimal Control and Reinforcement Learning: 
+     - MAE 589 Optimal Control and Reinforcement Learning: 
        - Course_Notes/NCSU/MAE_589_006_2024_Fall/Course_Description.md
        - Overview of Optimal Control Problem: Course_Notes/NCSU/MAE_589_006_2024_Fall/Overview_of_OCP/Overview_of_OCP.md
        - Direct Optimization: Course_Notes/NCSU/MAE_589_006_2024_Fall/Direct_Optimization/Direct_Optimization.md
        - Dynamical Programming: Course_Notes/NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP.md
-#     - DSC 595-02 LLM:
+       - Viablity Kernel: Course_Notes/NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel.md
+     - DSC 595 LLM: Course_Notes/NCSU/DSC_595_002_2024_Fall/DSC595.md
    - SCUT:
      - System Dynamics: 
        - Review Outline: Course_Notes/SCUT/System_Dynamics/Review_Outline.md
