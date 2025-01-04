@@ -33,14 +33,21 @@ nav:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md 
    - Others:
      - Git: Course_Notes/Others/how_to_use_git.md
- - Project Library:
-   - Projects/index.md
-   - SharpShooters: Projects/SharpShooters.md
-   - PPP: Projects/PPP/PPP.md
+
+ - Course Project:
+   - Course_Projects/index.md
+   - NCSU:
+     - MAE589 2024Fall: Course_Projects/NCSU/MAE589-2024Fall/MAE589.md
+     - DSC595 2024Fall: Course_Projects/NCSU/DSC595-2024Fall/DSC595.md
+   - SCUT:
+     - SharpShooters: Course_Projects/SharpShooters.md
+     - Data Analysis 2022Fall: Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld.md
+     - Big Data 2021Fall: Course_Projects/SCUT/BigData-2021Fall/PPP.md
  
  - Research:
-   - Research_Papers/index.md
-   - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Papers/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
+   - Research_Projects/index.md
+   - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
+   - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
 
  - CV: 
    - CV/index.md
