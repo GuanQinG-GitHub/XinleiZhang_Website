@@ -23,7 +23,7 @@
     ```sh
     git commit --amend -m "message"
     ```
-   - Since `--amend` rewrites history, the commit ID will change. If you've already pushed the commit to a remote repository, you'll need to `force push`
+    Since `--amend` rewrites history, the commit ID will change. If you've already pushed the last commit to a remote repository, you'll need to use `force push` this time
 
     ```sh
     git push origin main --force
