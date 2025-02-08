@@ -1,12 +1,12 @@
 ## Simple SSH setup in VScode with Mac OS
 Following tutorial: [link](https://code.visualstudio.com/docs/remote/ssh-tutorial#_remote-ssh)
 
-1. Remote - SSH extension installation in VScode extensions
-   - a blue status bar will appear at the bottom left corner
-2. Create the remote **v**irtual **m**achine (VM)
-   - ***Important***: add SSH public key to the VM
-     - keep the passphrase when generating the SSH key, which is required for SSH connection
-   - ***Important***: keep the username during creating the VM
+1. Install Remote - SSH extension in VScode extensions <br>
+   A blue status bar will appear at the bottom left corner
+2. Create the remote **v**irtual **m**achine (VM)<br>
+   ***Important***: keep the username during creating the VM<br>
+   ***Important***: add SSH public key to the VM<br>
+     - keep the passphrase when generating the SSH key, which is required for SSH connection<br>
 3. Specify the public IP address of VM
 4. Establish the SSH connection
     - **Option 1**: test the connection in command line
@@ -14,11 +14,11 @@ Following tutorial: [link](https://code.visualstudio.com/docs/remote/ssh-tutoria
     ssh username@hostpublichIP
     # example: ssh xinlei@172.190.229.141
     ```
-    - **Option 2**: establish the SSH connection in VScode
-      - Click the remote status bar at the bottom left corner to bring up the common remote - SSH commands
-      - Select the `connect to HOST`
-      - Follow the instruction, input the `username@hostpublichIP`, and passphrase to establish the SSH connection
-      - The remote status bar at the bottom left corner will indicate the host public IP if connection succeed
+    - **Option 2**: establish the SSH connection in VScode<br>
+        1. Click the remote status bar at the bottom left corner to bring up the common remote - SSH commands
+        2. Select the `connect to HOST`
+        3. Follow the instruction, input the `username@hostpublichIP`, and passphrase to establish the SSH connection
+        4. The remote status bar at the bottom left corner will indicate the host public IP if connection succeed
 5. Open the folder of VM in local VScode
    - input `>file:Open Folder` in VScode command palette
 
