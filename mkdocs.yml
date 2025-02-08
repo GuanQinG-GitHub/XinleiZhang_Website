@@ -9,7 +9,7 @@ site_description: Xinlei's Personal Website
 
 # [Navigation]
 nav:
- - Course Notes:
+ - Knowledge Sets:
    - Course_Notes/index.md
    - NCSU:
      - MAE 405 Controls Lab: Course_Notes/NCSU/MAE_405_2024_Fall/MAE405.md
