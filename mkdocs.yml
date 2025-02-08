@@ -20,6 +20,8 @@ nav:
        - Dynamical Programming: Course_Notes/NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP.md
        - Viablity Kernel: Course_Notes/NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel.md
      - DSC 595 LLM: Course_Notes/NCSU/DSC_595_002_2024_Fall/DSC595.md
+     - MAE521 Linear System Theory: Course_Notes/NCSU/MAE_521_2025_Spring/placeholder.md
+     - MA542 Convex Optimization: Course_Notes/NCSU/MA542_2025_Spring/placeholder.md
    - SCUT:
      - System Dynamics: 
        - Review Outline: Course_Notes/SCUT/System_Dynamics/Review_Outline.md
@@ -50,7 +52,7 @@ nav:
    - Research_Projects/index.md
    - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
    - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
-
+   - Model Predictive Path Integral Control: Research_Projects/MPPI/MPPI.md 
  - CV: 
    - CV/index.md
 

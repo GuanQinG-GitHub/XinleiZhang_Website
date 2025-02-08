@@ -18,7 +18,16 @@
     ```sh
     git push origin main # push the local repo to the main branch in the remote repo
     ```
+6. Combine the current changes into the last commit
 
+    ```sh
+    git commit --amend -m "message"
+    ```
+   - Since `--amend` rewrites history, the commit ID will change. If you've already pushed the commit to a remote repository, you'll need to `force push`
+
+    ```sh
+    git push origin main --force
+    ```
 ***Other Commands***
 ```sh
 git remote # show the name of the local cloned repo
