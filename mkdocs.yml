@@ -37,6 +37,7 @@ nav:
    - Others:
      - Git: Course_Notes/Others/how_to_use_git.md
      - SSH: Course_Notes/Others/how_to_use_ssh.md
+     - Docker: Course_Notes/Others/how_to_use_docker.md
 
  - Course Project:
    - Course_Projects/index.md
