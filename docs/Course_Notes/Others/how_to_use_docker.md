@@ -15,6 +15,100 @@ Isolated. Since containers are run in isolation, they have minimal influence on 
 Independent. Each container is independently managed. Deleting one container won't affect any others.
 Portable. Containers can run anywhere! The container that runs on your development machine will work the same way in a data center or anywhere in the cloud!
 
+### Start and run multi-container with `docker-compose.yml`
+
+#### `docker compose up` Command  
+
+The command **`docker compose up`** is used to start and run multi-container Docker applications defined in a **`docker-compose.yml`** file.  
+
+#### What Does `docker compose up` Do?  
+- **Reads the `docker-compose.yml` file** to determine which services (containers) need to be started.  
+- **Builds images** if they don’t already exist.  
+- **Creates and starts containers**, networks, and volumes as defined in the file.  
+- **Attaches to container logs**, displaying output from all services in the terminal.  
+
+#### Basic Usage  
+To start all services defined in the `docker-compose.yml` file:  
+```bash
+docker compose up
+```
+
+### Common Options  
+
+| Command | Description |
+|---------|-------------|
+| `docker compose up -d` | Run containers in the background (detached mode). |
+| `docker compose up --build` | Rebuild the images before starting containers. |
+| `docker compose up --force-recreate` | Force recreate containers even if they already exist. |
+| `docker compose up <service_name>` | Start only a specific service from the `docker-compose.yml` file. |
+
+### Stopping the Services  
+To stop and remove all running containers:  
+
+```bash
+docker compose down
+```
+
+### Running Multiple Docker Containers with Different ROS Versions  
+
+#### 1. Running Multiple Docker Containers with Different ROS Versions  
+You can run multiple containers with different ROS versions using separate Docker images. Example:  
+
+```bash
+docker run -it --rm ros:noetic bash  # ROS1 Noetic
+docker run -it --rm ros:foxy bash    # ROS2 Foxy
+```
+Each container will have its own isolated ROS environment, preventing conflicts between different versions.  
+
+---
+
+#### 2. Sharing ROS Topics Between Containers  
+By default, containers are **isolated**, so ROS topics won't be shared unless you configure the network properly. Here’s how you can make topics available across containers:  
+
+**ROS 1: Using a Shared ROS Master**  
+For ROS1 (e.g., Noetic), you need to:  
+
+1. **Run a ROS Master in one container**:  
+   ```bash
+   docker run -it --rm --network=host ros:noetic roscore
+   ```
+2. **Start other ROS1 containers and connect to the master**:  
+   ```bash
+   docker run -it --rm --network=host ros:noetic bash
+   export ROS_MASTER_URI=http://localhost:11311
+   ```
+   - Setting `--network=host` allows all containers to share the same ROS network.  
+   - Alternatively, use a **custom bridge network** and explicitly set `ROS_MASTER_URI` to the master's IP.  
+
+---
+
+**ROS 2: Using DDS for Communication**  
+ROS2 (e.g., Foxy) uses DDS (Data Distribution Service), which supports direct discovery. To allow inter-container communication:  
+
+1. **Use the same network** (e.g., `--network=host` or a custom bridge network):  
+   ```bash
+   docker run -it --rm --network=host ros:foxy ros2 run demo_nodes_py talker
+   ```
+2. **Ensure all containers have the same ROS_DOMAIN_ID**:  
+   ```bash
+   export =42  # Set this in all containers
+   ```
+
+**If running ROS1 and ROS2 together**, you will need a **ROS1-ROS2 bridge** to translate topics between them.  
+
+---
+
+#### 3. Best Networking Practices  
+- **Use `--network=host`** for the simplest setup (but not ideal for security in production).  
+- **Create a Docker bridge network** for better control:  
+  ```bash
+  docker network create ros_net
+  docker run -it --rm --network=ros_net ros:noetic
+  ```
+- **Use `ROS_MASTER_URI` (ROS1) or DDS settings (ROS2)** to ensure proper topic sharing.  
+
+---
+
 ## Example tutorial of using ROS2, Docker, SSH
 Summary: Running ROS2 hello_world node inside docker container on InDro robot
 
