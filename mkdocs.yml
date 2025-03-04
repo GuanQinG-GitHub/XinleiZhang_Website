@@ -18,6 +18,7 @@ nav:
        - Overview of Optimal Control Problem: Course_Notes/NCSU/MAE_589_006_2024_Fall/Overview_of_OCP/Overview_of_OCP.md
        - Direct Optimization: Course_Notes/NCSU/MAE_589_006_2024_Fall/Direct_Optimization/Direct_Optimization.md
        - Dynamical Programming: Course_Notes/NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP.md
+       - LQR: Course_Notes/NCSU/MAE_589_006_2024_Fall/LQR/LQR.md
        - HJB Analysis: Course_Notes/NCSU/MAE_589_006_2024_Fall/HJB_analysis/HJB.md
        - Viablity Kernel: Course_Notes/NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel.md
      - DSC 595 LLM: Course_Notes/NCSU/DSC_595_002_2024_Fall/DSC595.md
