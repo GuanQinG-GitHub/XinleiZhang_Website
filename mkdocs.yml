@@ -45,6 +45,9 @@ nav:
    - NCSU:
      - MAE589 2024Fall: Course_Projects/NCSU/MAE589-2024Fall/MAE589.md
      - DSC595 2024Fall: Course_Projects/NCSU/DSC595-2024Fall/DSC595.md
+     - CSC791 2025Spring: 
+       - Q-Learning: Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/Wall_following.md
+       - Particle Filter: Course_Projects/NCSU/CSC791-2025Spring/Particle_Filter/particle_filter.md
    - SCUT:
      - SharpShooters: Course_Projects/SharpShooters.md
      - Data Analysis 2022Fall: Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld.md
