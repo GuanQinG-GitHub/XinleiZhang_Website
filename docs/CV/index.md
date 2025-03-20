@@ -11,6 +11,6 @@ hide:
 
 Latest update: 01-04-2025
 
-[Click here to view the pdf form of Xinlei's CV (long-version)](CV_Xinlei_11_06_2024.pdf).
+[Click here to view the pdf form of Xinlei's CV (long-version)](CV_long_LTS_20250320.pdf).
 
 Latest update: 11-06-2024
