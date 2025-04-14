@@ -58,7 +58,7 @@ nav:
    - Research_Projects/index.md
    - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
    - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
-   - Model Predictive Path Integral Control: Research_Projects/MPPI/MPPI.md 
+   - Model Predictive Path Integral Control: Research_Projects/ZSG-MPPI/ZSG-MPPI.md 
  - CV: 
    - CV/index.md
 
@@ -72,14 +72,16 @@ nav:
    - SYS20230406: Speech/[SYS20230406]Notes.md
    - 0626Talk: Speech/0626_talk_Xinlei.md
 
+ - Valuable Moments: moments/moment.md
   
+
 # [UI]
 ## [top]
 
 # Custom Homepage Elements
 # home_cover_image: MainPage/Profile_Xinlei%20-%20Circle.png # This path starts at your root mkdocs directory.
-home_cover_image: MainPage/Profile_Xinlei_2.png
-home_cover_image_size: 18  # 200px / 16 = 12.5rem
+home_cover_image: MainPage/Profile_Xinlei - Circle.png
+home_cover_image_size: 20  # 200px / 16 = 12.5rem
 home_tagline: Xinlei Zhang
 home_description: Hi, I'm a first year Ph.D. student in North Carolina State University.
 
@@ -133,6 +135,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
 
 extra_javascript:
   # latex支持
