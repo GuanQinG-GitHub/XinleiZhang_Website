@@ -58,7 +58,7 @@ nav:
    - Research_Projects/index.md
    - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
    - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
-   - Model Predictive Path Integral Control: Research_Projects/ZSG-MPPI/ZSG-MPPI.md 
+   - ZSG-MPPI: Research_Projects/ZSG-MPPI/ZSG-MPPI.md 
  - CV: 
    - CV/index.md
 
