@@ -36,10 +36,11 @@ nav:
        - Lecture Summary 1: Course_Notes/SCUT/Classical_Control_Theory/Lecture_summary_1.md
  #    - Heat Transfer:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md 
-   - Others:
+   - Random:
      - Git: Course_Notes/Others/how_to_use_git.md
      - SSH: Course_Notes/Others/how_to_use_ssh.md
      - Docker: Course_Notes/Others/how_to_use_docker.md
+     - Matlab GPU Toolbox: Course_Notes/Others/how_to_use_matlab_GPU_toolbox.md
 
  - Course Project:
    - Course_Projects/index.md
