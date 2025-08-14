@@ -1,0 +1,2912 @@
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Xinlei's Personal Website">
+      
+      
+        <meta name="author" content="Xinlei">
+      
+      
+        <link rel="canonical" href="https://guanqing-github.github.io/personal-wbsite/Course_Notes/SCUT/System_Dynamics/Review_Outline/">
+      
+      
+        <link rel="prev" href="../../../NCSU/MA542_2025_Spring/placeholder/">
+      
+      
+        <link rel="next" href="../../Classical_Control_Theory/Lecture_summary_1/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Review Outline - Xinlei's Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#review-outline-for-system-dynamics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Xinlei&#39;s Page" class="md-header__button md-logo" aria-label="Xinlei's Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xinlei's Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Review Outline
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Knowledge Sets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Course_Projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Course Project
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Research_Projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Research
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../CV/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CV
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Awards/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Award & Honor
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Speech/index.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Talk Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Xinlei&#39;s Page" class="md-nav__button md-logo" aria-label="Xinlei's Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Xinlei's Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Knowledge Sets
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge Sets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    NCSU
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            NCSU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_405_2024_Fall/MAE405/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE 405 Controls Lab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_2" id="__nav_1_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MAE 589 Optimal Control and Reinforcement Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            MAE 589 Optimal Control and Reinforcement Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Course_Description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Overview_of_OCP/Overview_of_OCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of Optimal Control Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Direct_Optimization/Direct_Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Direct Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynamical Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/LQR/LQR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LQR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/HJB_analysis/HJB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HJB Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Viablity Kernel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/DSC_595_002_2024_Fall/DSC595/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DSC 595 LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_521_2025_Spring/placeholder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE521 Linear System Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MA542_2025_Spring/placeholder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MA542 Convex Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    SCUT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            SCUT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    System Dynamics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            System Dynamics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Review Outline
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review Outline
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-complex-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 1 Complex Number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-laplace-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 2 Laplace Transform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-partial-fraction-expansion-work-for-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3 Partial Fraction Expansion (Work for L.T.)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-mechanical-system-all-models-are-wrong-but-some-are-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 4 Mechanical system All models are wrong but some are useful
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-transfer-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 5 Transfer Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-transient-and-steady-state-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 6 Transient and Steady-State Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-state-space-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 7 State-Space Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-8-electrical-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 8 Electrical Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-9-dc-motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 9 DC Motor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-10-fluid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 10 Fluid System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-11-linearization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 11 Linearization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-12-time-domain-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 12 Time Domain Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-13-frequency-domain-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 13 Frequency Domain Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-14-bode-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 14 Bode Plot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-15-vibration-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 15 Vibration Isolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-16-vibration-absorber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 16 Vibration Absorber
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-17-mode-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 17 Mode Shape
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-18-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 18 PID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-19-performance-of-second-order-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 19 Performance of second order system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-20-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 20 Stability
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Classical Control Theory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classical Control Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Classical_Control_Theory/Lecture_summary_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lecture Summary 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Random
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Random
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_matlab_GPU_toolbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matlab GPU Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Course_Projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Course Project
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NCSU
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            NCSU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/MAE589-2024Fall/MAE589/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE589 2024Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/DSC595-2024Fall/DSC595/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DSC595 2024Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CSC791 2025Spring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSC791 2025Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/Wall_following/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Q-Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/CSC791-2025Spring/Particle_Filter/particle_filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Particle Filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SCUT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            SCUT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/SharpShooters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharpShooters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis 2022Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/SCUT/BigData-2021Fall/PPP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Big Data 2021Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Research_Projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    On Ambiguity in 6-DoF Magnetic Pose Estimation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiple Permanent Magnets Tracking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Research_Projects/ZSG-MPPI/ZSG-MPPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZSG-MPPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../CV/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    CV
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            CV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Awards/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Award & Honor
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Award & Honor
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Awards/2023MCM/2023MCM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023 MCM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Talk Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Talk Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/[SYS20230316]Notes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SYS20230316
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/[SYS20230406]Notes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SYS20230406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/0626_talk_Xinlei.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0626Talk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-complex-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 1 Complex Number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-laplace-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 2 Laplace Transform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-partial-fraction-expansion-work-for-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3 Partial Fraction Expansion (Work for L.T.)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-mechanical-system-all-models-are-wrong-but-some-are-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 4 Mechanical system All models are wrong but some are useful
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-transfer-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 5 Transfer Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-transient-and-steady-state-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 6 Transient and Steady-State Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-state-space-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 7 State-Space Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-8-electrical-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 8 Electrical Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-9-dc-motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 9 DC Motor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-10-fluid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 10 Fluid System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-11-linearization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 11 Linearization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-12-time-domain-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 12 Time Domain Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-13-frequency-domain-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 13 Frequency Domain Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-14-bode-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 14 Bode Plot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-15-vibration-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 15 Vibration Isolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-16-vibration-absorber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 16 Vibration Absorber
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-17-mode-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 17 Mode Shape
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-18-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 18 PID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-19-performance-of-second-order-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 19 Performance of second order system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-20-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 20 Stability
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="review-outline-for-system-dynamics">Review Outline for System Dynamics</h1>
+<h3 id="chapter-1-complex-number">Chapter 1 Complex Number</h3>
+<ol>
+<li>Rectangular form and polar form<ul>
+<li><span class="arithmatex">\(z=a+bj\)</span> (a,b) are the coordinate in complex plane</li>
+<li><span class="arithmatex">\(z=|z|e^{j\theta},|z|=\sqrt{a^2+b^2},\theta=arctan(\frac{b}{a})\)</span></li>
+</ul>
+</li>
+<li>Euler’s Formula<ul>
+<li><span class="arithmatex">\(e^{j\theta}=cos(\theta)+jsin(\theta)\)</span></li>
+</ul>
+</li>
+<li>Complex operations<ul>
+<li>Complex conjugate: <span class="arithmatex">\(z^*=a-bj=|z|e^{-j\theta}\)</span></li>
+<li>Addition and Subtraction</li>
+<li>Multiplication: <span class="arithmatex">\(z_1z_2=|z_1||z_2|e^{j(\theta_1+\theta_2)}\)</span></li>
+<li>Division: <span class="arithmatex">\(\frac{z_1}{z_2}=\frac{|z_1|}{|z_2|}e^{j(\theta_1-\theta_2)}\)</span></li>
+<li>Inverse: <span class="arithmatex">\(z^{-1}=|z|^{-1}e^{-j\theta}\)</span></li>
+</ul>
+</li>
+<li>Complex variable and complex function<ul>
+<li><span class="arithmatex">\(s=\sigma+j\omega,~\sigma~and~\omega\in R\)</span></li>
+<li><span class="arithmatex">\(F(s)=F_x+jF_y\)</span>, <span class="arithmatex">\(F_x\)</span> and <span class="arithmatex">\(F_y\)</span> are real functions</li>
+</ul>
+</li>
+<li>zeros and poles of a complex function<ul>
+<li><span class="arithmatex">\(F(s)=\frac{k(s+z_1)(s+z_2)...(s+z_m)}{(s+p_1)(s+p_2)...(s+p_n)}\)</span></li>
+<li>zeros: <span class="arithmatex">\(-z_1,-z_2,...,-z_m\)</span></li>
+<li>poles: <span class="arithmatex">\(-p_1,-p_2,...,-p_n\)</span></li>
+<li><strong>In practice, the number of zeros is always less than or equal to the number of poles</strong>, <span class="arithmatex">\(m\le n\)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-2-laplace-transform">Chapter 2 Laplace Transform</h3>
+<ol>
+<li>Definition of Laplace Transform (L.T.)</li>
+<li>Existence criteria</li>
+<li>Unit step function<ul>
+<li>Used to transform the signal into L.T. applicable form</li>
+</ul>
+</li>
+<li>Laplace Transform table</li>
+<li>Time delay and damping effect</li>
+<li>Superposition of Laplace Transform<ul>
+<li>Used to decompose the general input signal into typical forms easier for L.T.</li>
+</ul>
+</li>
+<li>Solving Differential Equation<ul>
+<li>From time domain to Laplace domain, back to time domain</li>
+</ul>
+</li>
+<li>Final Value Theorem<ul>
+<li>Used to compute the steady-state value of the output</li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-3-partial-fraction-expansion-work-for-lt">Chapter 3 Partial Fraction Expansion (Work for L.T.)</h3>
+<div class="arithmatex">\[
+X(s)=\frac{b_0+b_1s+...+b_ms^m}{a_0+a_1s+...+a_ns^n}=\frac{B(s)}{A(s)}
+\]</div>
+<ol>
+<li>Work by hand<ul>
+<li><span class="arithmatex">\(m\lt n\)</span><ul>
+<li>Distinct poles</li>
+<li>Repeated poles</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(m\ge n\)</span><ul>
+<li>Distinct poles</li>
+<li>Repeated poles</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Matlab<ul>
+<li><strong>Matlab Convention</strong><ul>
+<li>The power of polynomials are in descending form and the power of poles are in ascending form</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-4-mechanical-system-all-models-are-wrong-but-some-are-useful">Chapter 4 Mechanical system   All models are wrong but some are useful</h3>
+<ol>
+<li>Spring in series and paraller</li>
+<li>Spring-mass system<ul>
+<li>EOM</li>
+<li>L.T.</li>
+</ul>
+</li>
+<li>Spring-mass-damper system<ul>
+<li>EOM</li>
+<li>L.T.</li>
+</ul>
+</li>
+<li>Characteristic equation<ul>
+<li>Solution in three situations<ul>
+<li>Complex Conjugates</li>
+<li>One real root</li>
+<li>Two real roots</li>
+</ul>
+</li>
+<li>Damping Ration<ul>
+<li>Underdamped (Exponentially decaying sinusoid)</li>
+<li>Critically damped (Exponential decaying)</li>
+<li>Overdamped (Exponential decaying)</li>
+</ul>
+</li>
+<li>Natural frequency and damped natural frequency</li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-5-transfer-function">Chapter 5 Transfer Function</h3>
+<ol>
+<li>Transfer function (TF)<ul>
+<li>Definition<ul>
+<li><span class="arithmatex">\(TF(s)=G(s)=\frac{Y(s)}{U(s)}=\frac{output}{input}\)</span></li>
+<li>Suppose zero initial condition</li>
+<li>Only applicable to linear, constant coefficient, differential equation</li>
+</ul>
+</li>
+<li>Block Diagram (a graphical representation of TF)<ul>
+<li>elements: block, constant, summing point…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-6-transient-and-steady-state-response">Chapter 6 Transient and Steady-State Response</h3>
+<ol>
+<li>Two aspects of the construction of response<ul>
+<li>Transient repsonse (due to initial condition and input) + steady-state response (due to input)</li>
+<li>Free vibration (dut to initial condition) + Forced vibration (due to input)</li>
+</ul>
+</li>
+<li>Find the steady-state response using Final Value Theorem</li>
+</ol>
+<h3 id="chapter-7-state-space-model">Chapter 7 State-Space Model</h3>
+<ol>
+<li>Definition of state-space model<ul>
+<li><span class="arithmatex">\(\dot{x}=Ax+Bu,~y=Cx+Du\)</span></li>
+<li>Applicable to nonlinear, time-varying differential equation</li>
+</ul>
+</li>
+<li>Example of a 2 DOF mechanical system</li>
+<li>Block diagram of state-space model</li>
+<li>Transfer function of state-space model<ul>
+<li><span class="arithmatex">\(G(s)=C(sI-A)^{-1}B+D=\frac{Y(s)}{U(s)}\)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-8-electrical-systems">Chapter 8 Electrical Systems</h3>
+<ol>
+<li>Basic elements<ul>
+<li>Capacitor<ul>
+<li><span class="arithmatex">\(C=\frac{q}{e_c}\)</span></li>
+<li><span class="arithmatex">\(i=C\frac{de_c}{dt}\)</span></li>
+</ul>
+</li>
+<li>Inductor<ul>
+<li><span class="arithmatex">\(L=\frac{e_L}{di/dt},~e_L=L\frac{di}{dt}\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Example: RL circuit with step input voltage</li>
+</ol>
+<h3 id="chapter-9-dc-motor">Chapter 9 DC Motor</h3>
+<ul>
+<li>
+<p>Modelling Process</p>
+<ul>
+<li>
+<p>Electrical System</p>
+<p><span class="arithmatex">\(L_a\dot{i_a}+R_ai_a+e_b=e_a\)</span> (KVL)</p>
+<p><span class="arithmatex">\(e_b=k_b\dot{\theta}\)</span> (back emf)</p>
+</li>
+<li>
+<p>Motor Mechanical System</p>
+<p><span class="arithmatex">\(J\ddot{\theta}+b\dot{\theta}=T-T_L\)</span> (EOM)</p>
+<p><span class="arithmatex">\(T=ki_a\)</span> (Physical Law)</p>
+</li>
+<li>
+<p>Load</p>
+<p><span class="arithmatex">\(J_L\ddot{\theta}+b_L\dot{\theta}=T_L\)</span> (EOM)</p>
+</li>
+<li>
+<p>Gear (optional)</p>
+<p>Ideal Gear: <span class="arithmatex">\(T_2=\frac{r_2}{r_1}T_1\)</span> (Conservation of Power)</p>
+<p>General: <span class="arithmatex">\(J_1\frac{r_2}{r_1}\ddot{\theta_1}+b_1\frac{r_2}{r_1}\dot{\theta_1}+J_2\ddot{\theta_2}+b_2\dot{\theta_2}=\frac{r_2}{r_1}T_1-T_2\)</span> (EOM)</p>
+</li>
+<li>
+<p>Coupler (optional)</p>
+<p><span class="arithmatex">\(T_C=k_{tc}(\theta-\theta_L)\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="chapter-10-fluid-system">Chapter 10 Fluid System</h3>
+<ol>
+<li>Reynold Number<ul>
+<li>Inertial force vs Viscous force</li>
+<li>Turbulent vs Laminar</li>
+</ul>
+</li>
+<li>Valve equation (Relationship between head H and flow rate Q)<ul>
+<li>Laminar</li>
+<li>Turbulent</li>
+</ul>
+</li>
+<li>Capacitance<ul>
+<li>Conservation of Volume</li>
+</ul>
+</li>
+<li>Example: Tank system<ul>
+<li>Equation 1: conservation of volume</li>
+<li>Equation 2: valve equation</li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-11-linearization">Chapter 11 Linearization</h3>
+<ol>
+<li>Method: First order Taylor Series Expansion</li>
+<li>Example: Used in single tank system with turbulent in vavle</li>
+</ol>
+<h3 id="chapter-12-time-domain-analysis">Chapter 12 Time Domain Analysis</h3>
+<ol>
+<li>First order ODE system <span class="arithmatex">\(a\ddot{x}+b\dot{x}=0\)</span><ul>
+<li>Time constant T: <span class="arithmatex">\(T=\frac{a}{b}\)</span></li>
+<li>Typical values<ul>
+<li>0.37 at T, 0.83 at 2T, 0.95 at 3T, 0.98 at 4T</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Second order ODE system<ul>
+<li>only for underdamped system</li>
+<li>Time constant for the Exponential Decay Envelop<ul>
+<li><span class="arithmatex">\(T=\frac{1}{\xi \omega_n}\)</span></li>
+</ul>
+</li>
+<li>Experimentally determine the dample natural frequency and damping ration<ul>
+<li><span class="arithmatex">\(T=\frac{2\pi}{\omega_d},~ln(\frac{x_1}{x_2})=\frac{2\pi\xi}{\sqrt{1-\xi^2}}\)</span></li>
+</ul>
+</li>
+<li>Some terminology<ul>
+<li>Settling time-converge to 2% or 5%</li>
+<li>Overshoot <span class="arithmatex">\(\%M_p\frac{x_{peak}-x_{ss}}{x_{ss}}\)</span></li>
+<li>Peak time-rise to peak</li>
+<li>Delay time-reach 50% of the steady-state value</li>
+<li>Rise time-from 10% to 90% of the steady-state value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-13-frequency-domain-analysis">Chapter 13 Frequency Domain Analysis</h3>
+<ol>
+<li>Steady-state response of a system to a sinusoidal input<ul>
+<li><span class="arithmatex">\(u(t)=Psin(\omega t),~x_{ss}=Xsin(\omega t+\phi)\)</span></li>
+<li><span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(\phi\)</span> are determined by <span class="arithmatex">\(\omega\)</span></li>
+</ul>
+</li>
+<li>Forced vibration without damping</li>
+<li>Forced vibration with damping</li>
+<li>Sinusoidal transfer function (Frequency response function)<ul>
+<li>step 1: obtain transfer function <span class="arithmatex">\(G(s)\)</span></li>
+<li>step 2: let <span class="arithmatex">\(s\)</span> equal to <span class="arithmatex">\(jw\)</span></li>
+<li>step 3: <span class="arithmatex">\(\frac{x_0}{P}=|G(jw)|,~\phi=\angle G(jw)\)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-14-bode-plot">Chapter 14 Bode Plot</h3>
+<ol>
+<li>
+<p>Decibel (dB)</p>
+<p><span class="arithmatex">\(AR_{dB}=20log(|G(jw)|)=20log(AR)\)</span></p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ol>
+<h3 id="chapter-15-vibration-isolation">Chapter 15 Vibration Isolation</h3>
+<ol>
+<li>Imbalance in rotatin mechanical systems</li>
+<li>
+<p>Vibration isolation</p>
+<p><span class="arithmatex">\(G(jw)=\frac{1+j(2\xi\Omega)}{(1-\Omega^2)+j(2\xi\Omega)},~\Omega=\frac{\omega}{\omega_n}\)</span></p>
+<ul>
+<li>Force excitation</li>
+<li>Motion excitation</li>
+<li>Transimissibility TR<ul>
+<li><span class="arithmatex">\(TR\lt1~when~\Omega\gt\sqrt{2}\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="chapter-16-vibration-absorber">Chapter 16 Vibration Absorber</h3>
+<ul>
+<li>
+<p>Condition for zero vibration in main system</p>
+<p><span class="arithmatex">\(\sqrt{\frac{k_a}{m_a}}=\omega_n\)</span></p>
+</li>
+</ul>
+<h3 id="chapter-17-mode-shape">Chapter 17 Mode Shape</h3>
+<ul>
+<li>Example for free vibration of 2 DOF system</li>
+</ul>
+<h3 id="chapter-18-pid">Chapter 18 PID</h3>
+<ol>
+<li>Block diagram of feedback control system</li>
+<li>PID controller</li>
+<li>General conclusion</li>
+<li>Criterion for stability of PID controller</li>
+</ol>
+<h3 id="chapter-19-performance-of-second-order-system">Chapter 19 Performance of second order system</h3>
+<ol>
+<li>Peak Time</li>
+<li>Percent Overshoot</li>
+<li>Settling Time</li>
+</ol>
+<h3 id="chapter-20-stability">Chapter 20 Stability</h3>
+<ol>
+<li>Stable</li>
+<li>Marginally stable</li>
+<li>Unstable</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Xinlei Zhang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2311 @@
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Xinlei's Personal Website">
+      
+      
+        <meta name="author" content="Xinlei">
+      
+      
+        <link rel="canonical" href="https://guanqing-github.github.io/personal-wbsite/Course_Notes/SCUT/Heat_Transfer/Week_7/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Week 7 - Xinlei's Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#week-7" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Xinlei&#39;s Page" class="md-header__button md-logo" aria-label="Xinlei's Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xinlei's Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Week 7
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Knowledge Sets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Course_Projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Course Project
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Research_Projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Research
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../CV/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CV
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Awards/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Award & Honor
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Speech/index.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Talk Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Xinlei&#39;s Page" class="md-nav__button md-logo" aria-label="Xinlei's Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Xinlei's Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Knowledge Sets
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge Sets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NCSU
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            NCSU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_405_2024_Fall/MAE405/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE 405 Controls Lab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_2" id="__nav_1_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MAE 589 Optimal Control and Reinforcement Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            MAE 589 Optimal Control and Reinforcement Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Course_Description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Overview_of_OCP/Overview_of_OCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of Optimal Control Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Direct_Optimization/Direct_Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Direct Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynamical Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/LQR/LQR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LQR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/HJB_analysis/HJB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HJB Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Viablity Kernel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/DSC_595_002_2024_Fall/DSC595/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DSC 595 LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MAE_521_2025_Spring/placeholder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE521 Linear System Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NCSU/MA542_2025_Spring/placeholder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MA542 Convex Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SCUT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            SCUT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    System Dynamics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            System Dynamics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../System_Dynamics/Review_Outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review Outline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Classical Control Theory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classical Control Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Classical_Control_Theory/Lecture_summary_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lecture Summary 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Random
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Random
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/how_to_use_matlab_GPU_toolbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matlab GPU Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Course_Projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Course Project
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NCSU
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            NCSU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/MAE589-2024Fall/MAE589/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE589 2024Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/DSC595-2024Fall/DSC595/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DSC595 2024Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CSC791 2025Spring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSC791 2025Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/Wall_following/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Q-Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/NCSU/CSC791-2025Spring/Particle_Filter/particle_filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Particle Filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SCUT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            SCUT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/SharpShooters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharpShooters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis 2022Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Course_Projects/SCUT/BigData-2021Fall/PPP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Big Data 2021Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Research_Projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    On Ambiguity in 6-DoF Magnetic Pose Estimation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiple Permanent Magnets Tracking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Research_Projects/ZSG-MPPI/ZSG-MPPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZSG-MPPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../CV/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    CV
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            CV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Awards/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Award & Honor
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Award & Honor
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Awards/2023MCM/2023MCM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023 MCM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Talk Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Talk Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/[SYS20230316]Notes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SYS20230316
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/[SYS20230406]Notes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SYS20230406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Speech/0626_talk_Xinlei.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0626Talk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="week-7">Week 7</h1>
+<h1 id="introduction-to-heat-transfer">Introduction to Heat Transfer</h1>
+<ul>
+<li>Definition of Heat Transfer: Heat Transfer is thermal energy in transit due to a spatial temperature difference.</li>
+<li>Three different types of heat transfer modes<ul>
+<li>Conduction<ul>
+<li>Mainly occurred in solid, e.g., In a cup filled with hot water, heat is transferred from the inner surface contacted with the hot water to the outer surface.</li>
+</ul>
+</li>
+<li>Convection<ul>
+<li>Mainly occurred in fluid &amp; solid, e.g., wind and skin.</li>
+</ul>
+</li>
+<li>Radiation<ul>
+<li>All objects emit radiation all the time.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>First law of thermodynamics</p>
+<ul>
+<li>
+<p>The increase in the amount of energy stored in a control volume (<span class="arithmatex">\(\Delta E_{st}\)</span>) must equal the amount of energy that enters the control volume (<span class="arithmatex">\(E_{in}\)</span>), minus the amount the amount of energy that leaves the control volume (<span class="arithmatex">\(E_{out}\)</span>), plus the amount of energy that is generated within the control volume.</p>
+<div class="arithmatex">\[
+\Delta E_{st}=E_{in}-E_{out}+E_{g}
+\]</div>
+<p>Take the derivative respect to time on both sides,</p>
+<div class="arithmatex">\[
+\dot{\Delta E_{st}}=\dot{E_{in}}-\dot{E_{out}}+\dot{E_{g}}
+\]</div>
+<p>Since <span class="arithmatex">\(\dot{\Delta E_{st}}=\dot{E_{st}}\)</span>, this equation can also be written as,</p>
+<div class="arithmatex">\[
+\dot{E_{st}}=\dot{E_{in}}-\dot{E_{out}}+\dot{E_{g}}
+\]</div>
+<p>These four items represent the rate of change of energy (Power).</p>
+<p><img alt="Week7-1.png" src="Week7-1.png" /></p>
+</li>
+<li>
+<p>Internal Energy</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="conduction">Conduction</h1>
+<h2 id="conduction-rate-equation-fouriers-law">Conduction Rate Equation (Fourier’s Law)</h2>
+<ul>
+<li>
+<p><strong>Fourier’s Law is summarized from experimental phenomena</strong>, which holds for different material</p>
+<div class="arithmatex">\[
+q_x=kA\frac{\Delta T}{\Delta x}
+\]</div>
+<p>where <span class="arithmatex">\(q_x\)</span> is the heat transfer rate with the unit in W (Watt). <span class="arithmatex">\(k\)</span> is a constant and varies from materials, defined as thermal conductivity. <span class="arithmatex">\(\Delta T\)</span> and <span class="arithmatex">\(\Delta x\)</span> are the temperature difference and the length between two points. <span class="arithmatex">\(A\)</span> is the cross-sectional area, which is perpendicular to the direction of <span class="arithmatex">\(\Delta x\)</span>. In this equation, <span class="arithmatex">\(\Delta T\)</span> and <span class="arithmatex">\(\Delta x\)</span> are scalar and positive (direction-less), which gives a positive <span class="arithmatex">\(q_x\)</span>, since heat transfer rate measures power.</p>
+<p><img alt="Illustration for Fourier's Law" src="Week7-2.png" /></p>
+</li>
+<li>
+<p>In contrast, heat flux <span class="arithmatex">\(q_x''\)</span> is defined as a vector quantity.</p>
+<div class="arithmatex">\[
+q_x''=-k\frac{dT}{dx}
+\]</div>
+<p>From the zeroth law of thermodynamics, heat is always transferred from the higher temperature point to lower temperature point. Hence, the direction of heat transfer should start from the higher temperature point to the lower temperature point, which should be the same with the direction of heat flux. In the figure above, the origin of <span class="arithmatex">\(x\)</span>  is at the left end of the cylinder and the positive direction of <span class="arithmatex">\(dx\)</span> points to the right. If the left end is the higher temperature end, <span class="arithmatex">\(\frac{dT}{dx}\)</span> should be negative. With the negative sign in expression, <span class="arithmatex">\(q_x''\)</span> is positive in the direction of <span class="arithmatex">\(dx\)</span>, which is compatible with the zeroth law of thermodynamics.</p>
+<p>Since heat flux is a vector quantity, it can be extended to the 3 dimensional case. In cartesian coordinate system,</p>
+<div class="arithmatex">\[
+q_n''=-k_n(\underbrace{\frac{\partial T}{\partial x}\bold{i}+\frac{\partial T}{\partial y}\bold{j}+\frac{\partial T}{\partial z}\bold{k})}_{a~certain~direction~\bold{n}}
+\]</div>
+<p>where <span class="arithmatex">\(k_n\)</span> is the thermal conductivity along a certain direction <span class="arithmatex">\(\bold{n}\)</span>. If the material is isotropic, which means that the thermal conductivity is the same in all direction, <span class="arithmatex">\(k_x=k_y=k_z=k_{any~direction}=k\)</span>. Hence, equation above can be rewritten as</p>
+<div class="arithmatex">\[
+q''=q_x''\rm{i}+q_y''\rm{j}+q_z''\rm{k}\\q_x''=-k\frac{\partial T}{\partial x},~q_y''=-k\frac{\partial T}{\partial y},~q_z''=-k\frac{\partial T}{\partial z}
+\]</div>
+</li>
+</ul>
+<h2 id="thermal-conductivity">Thermal Conductivity</h2>
+<ul>
+<li><strong>In general, the thermal conductivity of a solid is larger than that of a liquid, which is larger than that of a gas.</strong> Since the intermolecular spacing is largest in gas, then liquid and solid. The thermal energy (heat) is mainly transferred by the collision of molecules. When the intermolecular spacing between two molecules gets larger, the energy transfer efficiency through collision gets lower, which leads to lower thermal conductivity.</li>
+</ul>
+<h2 id="heat-diffusion-equation">Heat Diffusion Equation</h2>
+<ul>
+<li>
+<p>Derivation</p>
+<p>In a control volume, a cubic with volume <span class="arithmatex">\(dxdydz\)</span> as shown below,</p>
+<p><img alt="Week7-3.png" src="Week7-3.png" /></p>
+<p>From the first law of thermodynamics (Conservation of energy),</p>
+<div class="arithmatex">\[
+\dot{E_{st}}=\dot{E_{in}}-\dot{E_{out}}+\dot{E_{g}}
+\]</div>
+<p>From thermal dynamics, suppose there is no phase change (no latent energy), for this control volume,</p>
+<div class="arithmatex">\[
+\dot{E_{st}}=\frac{\partial U_{sensible}}{\partial t}=\rho C_{p}\frac{\partial T}{\partial t}dxdydz
+\]</div>
+<p>where <span class="arithmatex">\(\rho\)</span> and <span class="arithmatex">\(C_p\)</span> are the density and the specific heat of the material.</p>
+<p>Suppose the heat is transferred in all 3 dimensions, i.e., <span class="arithmatex">\(q_x\)</span>, <span class="arithmatex">\(q_y\)</span>, <span class="arithmatex">\(q_z\ne0\)</span>. Since the heat transfer rate is a scalar quantity, the total heat transfer rate into the control volume is simply the algebraic sum of the heat transfer rate on different contacting surface.</p>
+<div class="arithmatex">\[
+\dot{E_{in}}=q_x+q_y+q_z\\\dot{E_{out}}=q_{x+dx}+q_{y+dy}+q_{z+dz}
+\]</div>
+<p>Note that when we write the expressions above, we assume the temperatures on faces <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(z\)</span> are higher than temperatures on surfaces <span class="arithmatex">\(x+dx\)</span>, <span class="arithmatex">\(y+dy\)</span>, <span class="arithmatex">\(z+dz\)</span>, due to the zeroth law of thermodynamics.</p>
+<p>The last term is the heat generation rate in the control volume,</p>
+<div class="arithmatex">\[
+\dot{E_g}=\dot{q}dxdydz
+\]</div>
+<p>where <span class="arithmatex">\(\dot{q}\)</span> is the rate at which energy is generated per unit volume (<span class="arithmatex">\(W/m^3\)</span>).</p>
+<p>Substitute these expressions into the equation of Conservation of energy,</p>
+<div class="arithmatex">\[
+\rho C_{p}\frac{\partial T}{\partial t}dxdydz=q_x+q_y+q_z-(q_{x+dx}+q_{y+dy}+q_{z+dz})+\dot{q}dxdydz
+\]</div>
+<p>From Taylor Series Expansion,</p>
+<div class="arithmatex">\[
+\small q_{x+dx}=q_x+\frac{dq_x}{dx}dx+\small{higher~order~term}\\q_{y+dy}=q_y+\frac{dq_y}{dy}dy+\small{higher~order~term}\\q_{z+dz}=q_z+\frac{dq_z}{dz}dz+\small{higher~order~term}
+\]</div>
+<p>With Fourier’s law, note that since <span class="arithmatex">\(q_{x,y,z}\)</span> is always a positive quantity, when we take the <span class="arithmatex">\(\Delta x\)</span> in the expression of <span class="arithmatex">\(q_x\)</span> approach to zero or <span class="arithmatex">\(dx\)</span>, the term <span class="arithmatex">\(\frac{dT}{dx}\)</span> will be negative, since <span class="arithmatex">\(T_{x+dx}\lt T_{x}\)</span> (the same operations on <span class="arithmatex">\(q_y\)</span> and <span class="arithmatex">\(q_z\)</span>). Hence, we need to manually add a minus sign in this situation, which gives</p>
+<div class="arithmatex">\[
+\small q_{x}=kA\frac{\Delta T}{\Delta x}\implies q_x=-kA\frac{dT}{dx} (tha~same~with~q_y,~q_z)
+\]</div>
+<p>In this 3-dimensional situation, temperature <span class="arithmatex">\(T\)</span> is the function of <span class="arithmatex">\(x ,y,z\)</span>, which gives,</p>
+<div class="arithmatex">\[
+\frac{dq_x}{dx}=\frac{d}{\partial x}(-k_xA_x\frac{\partial T}{\partial x}),~\frac{dq_y}{dy}=\frac{\partial}{\partial y}(-k_yA_y\frac{\partial T}{\partial y}),~\frac{dq_z}{dz}=\frac{d}{\partial z}(-k_zA_z\frac{\partial T}{\partial z})\\A_x=dydz,~A_y=dxdz,~A_z=dxdy
+\]</div>
+<p>Hence, the equation of Conservation of energy becomes,</p>
+<div class="arithmatex">\[
+\footnotesize \rho C_{p}\frac{\partial T}{\partial t}dxdydz=\frac{\partial}{\partial x}(k_x\frac{\partial T}{\partial x})dxdydz+\frac{\partial}{\partial y}(k_y\frac{\partial T}{\partial y})dxdydz+\frac{\partial}{\partial z}(k_z\frac{\partial T}{\partial z})dxdydz+\dot{q}dxdydz\\ \implies\rho C_{p}\frac{\partial T}{dt}=\frac{\partial}{\partial x}(k_x\frac{\partial T}{\partial x})+\frac{\partial}{\partial y}(k_y\frac{\partial T}{\partial y})+\frac{\partial}{\partial z}(k_z\frac{\partial T}{\partial z})+\dot{q}\tag{*}
+\]</div>
+<p><strong>Equation (*) is the general form of heat transfer function in 3-dimensional case in cartesian coordinate system</strong>.</p>
+<ul>
+<li>Also <strong>in cylindrical coordinate system <span class="arithmatex">\((r,\phi,z)\)</span></strong>, it becomes</li>
+</ul>
+<div class="arithmatex">\[
+\frac{1}{r}\frac{\partial}{\partial r}(k_r r\frac{\partial T}{\partial r})+\frac{1}{r^2}\frac{\partial}{\partial \phi}(k_{\phi}\frac{\partial T}{\partial \phi})+\frac{\partial}{\partial z}(k_{z}sin\frac{\partial T}{\partial z})+\dot{q}=\rho C_p\frac{\partial T}{\partial t}
+\]</div>
+<ul>
+<li><strong>In spherical coordinate system <span class="arithmatex">\((r,\phi,\theta)\)</span>,</strong></li>
+</ul>
+<div class="arithmatex">\[
+\small\frac{1}{r^2}\frac{\partial}{\partial r}(k_r r^2\frac{\partial T}{\partial r})+\frac{1}{r^2sin^2\theta}\frac{\partial}{\partial \phi}(k_{\phi}\frac{\partial T}{\partial \phi})+\frac{1}{r^2sin\theta}\frac{\partial}{\partial \theta}(k_{\theta}sin\theta\frac{\partial T}{\partial\theta})+\dot{q}=\rho C_p\frac{\partial T}{\partial t}
+\]</div>
+<p>There are three simplified cases when using equation (*),</p>
+<ol>
+<li>
+<p>If only one kind of isotropic material is used, then the thermal conductivity is the same in all direction,</p>
+<div class="arithmatex">\[
+\frac{\partial ^2T}{\partial x^2}+\frac{\partial ^2T}{\partial y^2}+\frac{\partial ^2T}{\partial z^2}+\frac{\dot{q}}{k}=\frac{\rho C_p}{k}\frac{\partial T}{\partial t}=\frac{1}{\alpha}\frac{\partial T}{\partial t},~\alpha=\frac{k}{\rho C_p}
+\]</div>
+</li>
+<li>
+<p>If steady-state condition is considered, there is no change in the amount of energy stored in the material, i.e., <span class="arithmatex">\(\dot{E_{st}}=0\implies\frac{\partial T}{\partial t}=0\)</span>,</p>
+<div class="arithmatex">\[
+\frac{\partial}{\partial x}(k_x\frac{\partial T}{\partial x})+\frac{\partial}{\partial y}(k_y\frac{\partial T}{\partial y})+\frac{\partial}{\partial z}(k_z\frac{\partial T}{\partial z})+\dot{q}=0
+\]</div>
+</li>
+<li>
+<p>If steady-state condition is considered <span class="arithmatex">\((\dot{E_{st}}=0\implies\frac{\partial T}{\partial t}=0)\)</span> in the one-dimensional case (only <span class="arithmatex">\(x\)</span> direction is considered) with no heat generation in the material <span class="arithmatex">\((\dot{E_g}=0)\)</span>, </p>
+<div class="arithmatex">\[
+\frac{d}{d x}(k_x\frac{d T}{d x})=0
+\]</div>
+<p>In this simplest case, from Fourier’s law, <span class="arithmatex">\(q_x''=-k_x\frac{dT}{dx}\)</span>,</p>
+<div class="arithmatex">\[
+\frac{d}{d x}(k_x\frac{d T}{d x})=0\implies\frac{dq_x''}{dx}=0
+\]</div>
+<p>which means that <strong>the heat flux <span class="arithmatex">\(q_x''\)</span> is a constant along the x direction</strong>. Note that only without heat generation <span class="arithmatex">\((\dot{E_g}=0)\)</span> in the material, this phenomenon exists.</p>
+</li>
+</ol>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Xinlei Zhang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

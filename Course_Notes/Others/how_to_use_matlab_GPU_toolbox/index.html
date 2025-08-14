@@ -1,0 +1,2760 @@
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Xinlei's Personal Website">
+      
+      
+        <meta name="author" content="Xinlei">
+      
+      
+        <link rel="canonical" href="https://guanqing-github.github.io/personal-wbsite/Course_Notes/Others/how_to_use_matlab_GPU_toolbox/">
+      
+      
+        <link rel="prev" href="../how_to_use_docker/">
+      
+      
+        <link rel="next" href="../../../Course_Projects/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Matlab GPU Toolbox - Xinlei's Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#matlab-gpu-programming-tutorial-for-monte-carlo-simulations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Xinlei&#39;s Page" class="md-header__button md-logo" aria-label="Xinlei's Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xinlei's Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Matlab GPU Toolbox
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Knowledge Sets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Course_Projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Course Project
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Research_Projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Research
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CV/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CV
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Awards/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Award & Honor
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Speech/index.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Talk Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Xinlei&#39;s Page" class="md-nav__button md-logo" aria-label="Xinlei's Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Xinlei's Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Knowledge Sets
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge Sets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    NCSU
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            NCSU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_405_2024_Fall/MAE405/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE 405 Controls Lab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_2" id="__nav_1_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MAE 589 Optimal Control and Reinforcement Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            MAE 589 Optimal Control and Reinforcement Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_589_006_2024_Fall/Course_Description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_589_006_2024_Fall/Overview_of_OCP/Overview_of_OCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of Optimal Control Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_589_006_2024_Fall/Direct_Optimization/Direct_Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Direct Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynamical Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_589_006_2024_Fall/LQR/LQR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LQR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_589_006_2024_Fall/HJB_analysis/HJB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HJB Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Viablity Kernel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/DSC_595_002_2024_Fall/DSC595/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DSC 595 LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MAE_521_2025_Spring/placeholder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE521 Linear System Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NCSU/MA542_2025_Spring/placeholder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MA542 Convex Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    SCUT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            SCUT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    System Dynamics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            System Dynamics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SCUT/System_Dynamics/Review_Outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review Outline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Classical Control Theory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classical Control Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SCUT/Classical_Control_Theory/Lecture_summary_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lecture Summary 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Random
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Random
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_to_use_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_to_use_ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_to_use_docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Matlab GPU Toolbox
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matlab GPU Toolbox
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Basic Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-key-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Key Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Key Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-gpu-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating GPU Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Transfer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-example-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Example Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efficient-data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efficient Data Transfer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use GPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Avoid GPU
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Common Pitfalls
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Course_Projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Course Project
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NCSU
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            NCSU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Course_Projects/NCSU/MAE589-2024Fall/MAE589/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAE589 2024Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Course_Projects/NCSU/DSC595-2024Fall/DSC595/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DSC595 2024Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CSC791 2025Spring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSC791 2025Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/Wall_following/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Q-Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Course_Projects/NCSU/CSC791-2025Spring/Particle_Filter/particle_filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Particle Filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SCUT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            SCUT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Course_Projects/SharpShooters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharpShooters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis 2022Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Course_Projects/SCUT/BigData-2021Fall/PPP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Big Data 2021Fall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Research_Projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    On Ambiguity in 6-DoF Magnetic Pose Estimation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiple Permanent Magnets Tracking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research_Projects/ZSG-MPPI/ZSG-MPPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZSG-MPPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CV/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    CV
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            CV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Awards/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Award & Honor
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Award & Honor
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Awards/2023MCM/2023MCM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023 MCM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Talk Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Talk Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Speech/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Speech/[SYS20230316]Notes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SYS20230316
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Speech/[SYS20230406]Notes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SYS20230406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Speech/0626_talk_Xinlei.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0626Talk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Basic Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-key-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Key Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Key Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-gpu-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating GPU Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Transfer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-example-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Example Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efficient-data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efficient Data Transfer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use GPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Avoid GPU
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Common Pitfalls
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="matlab-gpu-programming-tutorial-for-monte-carlo-simulations">MATLAB GPU Programming Tutorial for Monte Carlo Simulations</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-basic-setup">Basic Setup</a></li>
+<li><a href="#2-key-functions">Key Functions</a></li>
+<li><a href="#3-example-implementation">Example Implementation</a></li>
+<li><a href="#4-best-practices">Best Practices</a></li>
+<li><a href="#5-common-pitfalls">Common Pitfalls</a></li>
+</ol>
+<h2 id="1-basic-setup">1. Basic Setup</h2>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><span class="c">% Initialize random number generators</span>
+</span><span id="__span-0-2"><span class="n">seed</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1234</span><span class="p">;</span>
+</span><span id="__span-0-3"><span class="nb">rng</span><span class="p">(</span><span class="n">seed</span><span class="p">);</span><span class="w">         </span><span class="c">% CPU random number generator</span>
+</span><span id="__span-0-4"><span class="n">gpurng</span><span class="p">(</span><span class="n">seed</span><span class="p">);</span><span class="w">      </span><span class="c">% GPU random number generator</span>
+</span><span id="__span-0-5">
+</span><span id="__span-0-6"><span class="c">% Check GPU availability</span>
+</span><span id="__span-0-7"><span class="n">hasGPU</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gpuDevice</span><span class="p">();</span><span class="w">  </span><span class="c">% Returns GPU device object if available</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="2-key-functions">2. Key Functions</h2>
+<h3 id="creating-gpu-arrays">Creating GPU Arrays</h3>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><span class="c">% Convert CPU array to GPU array</span>
+</span><span id="__span-1-2"><span class="n">gpu_array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gpuArray</span><span class="p">(</span><span class="n">cpu_array</span><span class="p">);</span>
+</span><span id="__span-1-3">
+</span><span id="__span-1-4"><span class="c">% Create arrays directly on GPU</span>
+</span><span id="__span-1-5"><span class="n">zeros_gpu</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;gpuArray&#39;</span><span class="p">);</span>
+</span><span id="__span-1-6"><span class="n">rand_gpu</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;gpuArray&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="data-transfer">Data Transfer</h3>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><span class="c">% GPU to CPU transfer</span>
+</span><span id="__span-2-2"><span class="n">cpu_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gather</span><span class="p">(</span><span class="n">gpu_data</span><span class="p">);</span>
+</span><span id="__span-2-3">
+</span><span id="__span-2-4"><span class="c">% CPU to GPU transfer</span>
+</span><span id="__span-2-5"><span class="n">gpu_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gpuArray</span><span class="p">(</span><span class="n">cpu_data</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="parallel-execution">Parallel Execution</h3>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><span class="c">% Apply function to each element of GPU array</span>
+</span><span id="__span-3-2"><span class="n">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">arrayfun</span><span class="p">(@</span><span class="n">my_function</span><span class="p">,</span><span class="w"> </span><span class="n">gpu_array</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="3-example-implementation">3. Example Implementation</h2>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><span class="c">% GPU_vs_CPU_Example.m</span>
+</span><span id="__span-4-2"><span class="k">function</span><span class="w"> </span><span class="nf">GPU_vs_CPU_Example</span><span class="p">()</span>
+</span><span id="__span-4-3"><span class="w">    </span><span class="c">% Parameters</span>
+</span><span id="__span-4-4"><span class="w">    </span><span class="n">n_paths</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span><span class="w">    </span><span class="c">% Number of Monte Carlo paths</span>
+</span><span id="__span-4-5"><span class="w">    </span><span class="n">n_steps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">     </span><span class="c">% Time steps per path</span>
+</span><span id="__span-4-6">
+</span><span id="__span-4-7"><span class="w">    </span><span class="c">% Test both implementations</span>
+</span><span id="__span-4-8"><span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Testing CPU implementation...&#39;</span><span class="p">);</span>
+</span><span id="__span-4-9"><span class="w">    </span><span class="nb">tic</span><span class="p">;</span>
+</span><span id="__span-4-10"><span class="w">    </span><span class="p">[</span><span class="n">cpu_results</span><span class="p">,</span><span class="w"> </span><span class="n">cpu_time</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">runCPU</span><span class="p">(</span><span class="n">n_paths</span><span class="p">,</span><span class="w"> </span><span class="n">n_steps</span><span class="p">);</span>
+</span><span id="__span-4-11"><span class="w">    </span><span class="n">cpu_elapsed</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">toc</span><span class="p">;</span>
+</span><span id="__span-4-12">
+</span><span id="__span-4-13"><span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Testing GPU implementation...&#39;</span><span class="p">);</span>
+</span><span id="__span-4-14"><span class="w">    </span><span class="nb">tic</span><span class="p">;</span>
+</span><span id="__span-4-15"><span class="w">    </span><span class="p">[</span><span class="n">gpu_results</span><span class="p">,</span><span class="w"> </span><span class="n">gpu_time</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">runGPU</span><span class="p">(</span><span class="n">n_paths</span><span class="p">,</span><span class="w"> </span><span class="n">n_steps</span><span class="p">);</span>
+</span><span id="__span-4-16"><span class="w">    </span><span class="n">gpu_elapsed</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">toc</span><span class="p">;</span>
+</span><span id="__span-4-17">
+</span><span id="__span-4-18"><span class="w">    </span><span class="c">% Compare results</span>
+</span><span id="__span-4-19"><span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;\nResults Summary:\n&#39;</span><span class="p">);</span>
+</span><span id="__span-4-20"><span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;CPU total time: %.4f seconds\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cpu_elapsed</span><span class="p">);</span>
+</span><span id="__span-4-21"><span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;GPU total time: %.4f seconds\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">gpu_elapsed</span><span class="p">);</span>
+</span><span id="__span-4-22"><span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Speedup factor: %.2fx\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cpu_elapsed</span><span class="o">/</span><span class="n">gpu_elapsed</span><span class="p">);</span>
+</span><span id="__span-4-23">
+</span><span id="__span-4-24"><span class="w">    </span><span class="c">% Verify results are similar</span>
+</span><span id="__span-4-25"><span class="w">    </span><span class="n">max_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cpu_results</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">gather</span><span class="p">(</span><span class="n">gpu_results</span><span class="p">)));</span>
+</span><span id="__span-4-26"><span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Maximum difference between CPU and GPU results: %.2e\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">max_diff</span><span class="p">);</span>
+</span><span id="__span-4-27"><span class="k">end</span>
+</span><span id="__span-4-28">
+</span><span id="__span-4-29"><span class="k">function</span><span class="w"> </span><span class="nf">[results, computation_time] = runCPU</span><span class="p">(</span>n_paths, n_steps<span class="p">)</span>
+</span><span id="__span-4-30"><span class="w">    </span><span class="c">% CPU implementation</span>
+</span><span id="__span-4-31"><span class="w">    </span><span class="nb">tic</span><span class="p">;</span>
+</span><span id="__span-4-32"><span class="w">    </span><span class="n">results</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n_paths</span><span class="p">);</span>
+</span><span id="__span-4-33">
+</span><span id="__span-4-34"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">n_paths</span>
+</span><span id="__span-4-35"><span class="w">        </span><span class="c">% Initialize path</span>
+</span><span id="__span-4-36"><span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-37">
+</span><span id="__span-4-38"><span class="w">        </span><span class="c">% Simulate path</span>
+</span><span id="__span-4-39"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">n_steps</span>
+</span><span id="__span-4-40"><span class="w">            </span><span class="nb">eps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">randn</span><span class="p">();</span>
+</span><span id="__span-4-41"><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="mf">0.01</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="o">*</span><span class="nb">eps</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">0.01</span><span class="p">);</span>
+</span><span id="__span-4-42"><span class="w">        </span><span class="k">end</span>
+</span><span id="__span-4-43">
+</span><span id="__span-4-44"><span class="w">        </span><span class="c">% Store result</span>
+</span><span id="__span-4-45"><span class="w">        </span><span class="n">results</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-4-46"><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-4-47"><span class="w">    </span><span class="n">computation_time</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">toc</span><span class="p">;</span>
+</span><span id="__span-4-48"><span class="k">end</span>
+</span><span id="__span-4-49">
+</span><span id="__span-4-50"><span class="k">function</span><span class="w"> </span><span class="nf">[results, computation_time] = runGPU</span><span class="p">(</span>n_paths, n_steps<span class="p">)</span>
+</span><span id="__span-4-51"><span class="w">    </span><span class="c">% GPU implementation</span>
+</span><span id="__span-4-52"><span class="w">    </span><span class="nb">tic</span><span class="p">;</span>
+</span><span id="__span-4-53">
+</span><span id="__span-4-54"><span class="w">    </span><span class="c">% Initialize all paths on GPU</span>
+</span><span id="__span-4-55"><span class="w">    </span><span class="n">paths</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n_paths</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;gpuArray&#39;</span><span class="p">);</span>
+</span><span id="__span-4-56">
+</span><span id="__span-4-57"><span class="w">    </span><span class="c">% Simulate all paths in parallel</span>
+</span><span id="__span-4-58"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">n_steps</span>
+</span><span id="__span-4-59"><span class="w">        </span><span class="nb">eps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n_paths</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;gpuArray&#39;</span><span class="p">);</span>
+</span><span id="__span-4-60"><span class="w">        </span><span class="n">paths</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.1</span><span class="o">*</span><span class="n">paths</span><span class="o">*</span><span class="mf">0.01</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="o">*</span><span class="nb">eps</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">0.01</span><span class="p">);</span>
+</span><span id="__span-4-61"><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-4-62">
+</span><span id="__span-4-63"><span class="w">    </span><span class="n">results</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">paths</span><span class="p">;</span>
+</span><span id="__span-4-64"><span class="w">    </span><span class="n">computation_time</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">toc</span><span class="p">;</span>
+</span><span id="__span-4-65"><span class="k">end</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="4-best-practices">4. Best Practices</h2>
+<h3 id="efficient-data-transfer">Efficient Data Transfer</h3>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><span class="c">% Good Practice</span>
+</span><span id="__span-5-2"><span class="n">gpu_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gpuArray</span><span class="p">(</span><span class="n">cpu_data</span><span class="p">);</span>
+</span><span id="__span-5-3"><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">n_steps</span>
+</span><span id="__span-5-4"><span class="w">    </span><span class="c">% Process on GPU</span>
+</span><span id="__span-5-5"><span class="k">end</span>
+</span><span id="__span-5-6"><span class="n">final_result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gather</span><span class="p">(</span><span class="n">gpu_result</span><span class="p">);</span>
+</span><span id="__span-5-7">
+</span><span id="__span-5-8"><span class="c">% Bad Practice</span>
+</span><span id="__span-5-9"><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">n_steps</span>
+</span><span id="__span-5-10"><span class="w">    </span><span class="n">gpu_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gpuArray</span><span class="p">(</span><span class="n">cpu_data</span><span class="p">);</span><span class="w">  </span><span class="c">% Avoid frequent transfers</span>
+</span><span id="__span-5-11"><span class="w">    </span><span class="c">% Process</span>
+</span><span id="__span-5-12"><span class="w">    </span><span class="n">cpu_result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gather</span><span class="p">(</span><span class="n">gpu_result</span><span class="p">);</span>
+</span><span id="__span-5-13"><span class="k">end</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="memory-management">Memory Management</h3>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="c">% Clear GPU memory</span>
+</span><span id="__span-6-2"><span class="nb">reset</span><span class="p">(</span><span class="n">gpuDevice</span><span class="p">);</span>
+</span><span id="__span-6-3">
+</span><span id="__span-6-4"><span class="c">% Check GPU memory usage</span>
+</span><span id="__span-6-5"><span class="n">gpu</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gpuDevice</span><span class="p">();</span>
+</span><span id="__span-6-6"><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Available GPU memory: %g GB\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">gpu</span><span class="p">.</span><span class="n">AvailableMemory</span><span class="o">/</span><span class="mf">1e9</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="when-to-use-gpu">When to Use GPU</h3>
+<ul>
+<li>Large-scale parallel computations</li>
+<li>Computationally intensive operations</li>
+<li>Minimal data dependencies</li>
+<li>Large datasets</li>
+</ul>
+<h3 id="when-to-avoid-gpu">When to Avoid GPU</h3>
+<ul>
+<li>Small datasets</li>
+<li>Sequential operations</li>
+<li>Operations requiring frequent CPU-GPU transfers</li>
+<li>Memory-constrained situations</li>
+</ul>
+<h2 id="5-common-pitfalls">5. Common Pitfalls</h2>
+<ol>
+<li><strong>Excessive Data Transfer</strong></li>
+<li>Minimize transfers between CPU and GPU</li>
+<li>
+<p>Keep computations on GPU as long as possible</p>
+</li>
+<li>
+<p><strong>Poor Memory Management</strong></p>
+</li>
+<li>Monitor GPU memory usage</li>
+<li>Clear GPU memory when needed</li>
+<li>
+<p>Consider memory limitations</p>
+</li>
+<li>
+<p><strong>Inefficient Parallelization</strong></p>
+</li>
+<li>Use vectorized operations instead of loops</li>
+<li>Utilize built-in GPU-enabled functions</li>
+<li>
+<p>Ensure proper batch sizing</p>
+</li>
+<li>
+<p><strong>Error Handling</strong>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><span class="c">% Always check for GPU availability</span>
+</span><span id="__span-7-2"><span class="k">if</span><span class="w"> </span><span class="n">gpuDeviceCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-7-3"><span class="w">    </span><span class="c">% GPU code</span>
+</span><span id="__span-7-4"><span class="k">else</span>
+</span><span id="__span-7-5"><span class="w">    </span><span class="c">% CPU fallback</span>
+</span><span id="__span-7-6"><span class="k">end</span>
+</span></code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<p>This tutorial is based on the implementation shown in the provided Monte Carlo simulation code. For specific applications, you may need to adjust the approaches based on your computational requirements and hardware capabilities.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Xinlei Zhang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
