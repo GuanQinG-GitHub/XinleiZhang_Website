@@ -9,40 +9,47 @@ site_description: Xinlei's Personal Website
 
 # [Navigation]
 nav:
- - Knowledge Sets:
-   - Course_Notes/index.md
-   - NCSU:
-     - MAE 405 Controls Lab: Course_Notes/NCSU/MAE_405_2024_Fall/MAE405.md
-     - MAE 589 Optimal Control and Reinforcement Learning: 
-       - Course_Notes/NCSU/MAE_589_006_2024_Fall/Course_Description.md
-       - Overview of Optimal Control Problem: Course_Notes/NCSU/MAE_589_006_2024_Fall/Overview_of_OCP/Overview_of_OCP.md
-       - Direct Optimization: Course_Notes/NCSU/MAE_589_006_2024_Fall/Direct_Optimization/Direct_Optimization.md
-       - Dynamical Programming: Course_Notes/NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP.md
-       - LQR: Course_Notes/NCSU/MAE_589_006_2024_Fall/LQR/LQR.md
-       - HJB Analysis: Course_Notes/NCSU/MAE_589_006_2024_Fall/HJB_analysis/HJB.md
-       - Viablity Kernel: Course_Notes/NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel.md
-     - DSC 595 LLM: Course_Notes/NCSU/DSC_595_002_2024_Fall/DSC595.md
-     - MAE521 Linear System Theory: Course_Notes/NCSU/MAE_521_2025_Spring/placeholder.md
-     - MA542 Convex Optimization: Course_Notes/NCSU/MA542_2025_Spring/placeholder.md
-   - SCUT:
-     - System Dynamics: 
-       - Review Outline: Course_Notes/SCUT/System_Dynamics/Review_Outline.md
- #   - Data Structure:
- #      - Introduction and Algorithm: Course_Notes/SCUT/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
- #      - List, Stack and Queue: Course_Notes/SCUT/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
- #      - Binary Tree: Course_Notes/SCUT/Data_Structure/CH_5_Binary_Tree.md
- #      - Internal Sorting: Course_Notes/SCUT/Data_Structure/CH_7_Internal_Sorting.md
-     - Classical Control Theory: 
-       - Lecture Summary 1: Course_Notes/SCUT/Classical_Control_Theory/Lecture_summary_1.md
+  # - Project Gallery: 
+  #  - Course_Notes/index.md
+  #  - Random:
+  #    - Git: Course_Notes/Others/how_to_use_git.md
+  #    - SSH: Course_Notes/Others/how_to_use_ssh.md
+  #    - Docker: Course_Notes/Others/how_to_use_docker.md
+  #    - Matlab GPU Toolbox: Course_Notes/Others/how_to_use_matlab_GPU_toolbox.md
+#  - Knowledge Sets:
+#    - Course_Notes/index.md
+#    - NCSU:
+#      - MAE 405 Controls Lab: Course_Notes/NCSU/MAE_405_2024_Fall/MAE405.md
+#      - MAE 589 Optimal Control and Reinforcement Learning: 
+#        - Course_Notes/NCSU/MAE_589_006_2024_Fall/Course_Description.md
+#        - Overview of Optimal Control Problem: Course_Notes/NCSU/MAE_589_006_2024_Fall/Overview_of_OCP/Overview_of_OCP.md
+#        - Direct Optimization: Course_Notes/NCSU/MAE_589_006_2024_Fall/Direct_Optimization/Direct_Optimization.md
+#        - Dynamical Programming: Course_Notes/NCSU/MAE_589_006_2024_Fall/Dynamical_Programming/DP.md
+#        - LQR: Course_Notes/NCSU/MAE_589_006_2024_Fall/LQR/LQR.md
+#        - HJB Analysis: Course_Notes/NCSU/MAE_589_006_2024_Fall/HJB_analysis/HJB.md
+#        - Viablity Kernel: Course_Notes/NCSU/MAE_589_006_2024_Fall/Viability_Kernel/Viability_Kernel.md
+#      - DSC 595 LLM: Course_Notes/NCSU/DSC_595_002_2024_Fall/DSC595.md
+#      - MAE521 Linear System Theory: Course_Notes/NCSU/MAE_521_2025_Spring/placeholder.md
+#      - MA542 Convex Optimization: Course_Notes/NCSU/MA542_2025_Spring/placeholder.md
+#    - SCUT:
+#      - System Dynamics: 
+#        - Review Outline: Course_Notes/SCUT/System_Dynamics/Review_Outline.md
+#  #   - Data Structure:
+#  #      - Introduction and Algorithm: Course_Notes/SCUT/Data_Structure/CH_1~3_Introduction_and_Algorithm_Analysis.md
+#  #      - List, Stack and Queue: Course_Notes/SCUT/Data_Structure/CH_4_Lists_Stacks_and_Queues.md
+#  #      - Binary Tree: Course_Notes/SCUT/Data_Structure/CH_5_Binary_Tree.md
+#  #      - Internal Sorting: Course_Notes/SCUT/Data_Structure/CH_7_Internal_Sorting.md
+#      - Classical Control Theory: 
+#        - Lecture Summary 1: Course_Notes/SCUT/Classical_Control_Theory/Lecture_summary_1.md
  #    - Heat Transfer:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md 
-   - Random:
-     - Git: Course_Notes/Others/how_to_use_git.md
-     - SSH: Course_Notes/Others/how_to_use_ssh.md
-     - Docker: Course_Notes/Others/how_to_use_docker.md
-     - Matlab GPU Toolbox: Course_Notes/Others/how_to_use_matlab_GPU_toolbox.md
-
- - Course Project:
+ - Research Project Gallery:
+   - Research_Projects/index.md
+   - ZSG-MPPI: Research_Projects/ZSG-MPPI/ZSG-MPPI.md
+   - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
+   - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
+    
+ - Course Project Gallery:
    - Course_Projects/index.md
    - NCSU:
      - MAE589 2024Fall: Course_Projects/NCSU/MAE589-2024Fall/MAE589.md
@@ -54,24 +61,22 @@ nav:
      - SharpShooters: Course_Projects/SharpShooters.md
      - Data Analysis 2022Fall: Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld.md
      - Big Data 2021Fall: Course_Projects/SCUT/BigData-2021Fall/PPP.md
- 
- - Research:
-   - Research_Projects/index.md
-   - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
-   - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
-   - ZSG-MPPI: Research_Projects/ZSG-MPPI/ZSG-MPPI.md 
  - CV: 
    - CV/index.md
+ - Random Notes:
+   - Git: Course_Notes/Others/how_to_use_git.md
+   - SSH: Course_Notes/Others/how_to_use_ssh.md
+   - Docker: Course_Notes/Others/how_to_use_docker.md
+   - Matlab GPU Toolbox: Course_Notes/Others/how_to_use_matlab_GPU_toolbox.md
+#  - Award & Honor:
+#    - Awards/index.md
+#    - 2023 MCM: Awards/2023MCM/2023MCM.md
 
- - Award & Honor:
-   - Awards/index.md
-   - 2023 MCM: Awards/2023MCM/2023MCM.md
-
- - Talk Notes:
-   - Speech/index.md
-   - SYS20230316: Speech/[SYS20230316]Notes.md
-   - SYS20230406: Speech/[SYS20230406]Notes.md
-   - 0626Talk: Speech/0626_talk_Xinlei.md
+#  - Talk Notes:
+#    - Speech/index.md
+#    - SYS20230316: Speech/[SYS20230316]Notes.md
+#    - SYS20230406: Speech/[SYS20230406]Notes.md
+#    - 0626Talk: Speech/0626_talk_Xinlei.md
 
   
 
@@ -83,7 +88,7 @@ nav:
 home_cover_image: MainPage/Profile_Xinlei - Circle.png
 home_cover_image_size: 20  # 200px / 16 = 12.5rem
 home_tagline: Xinlei Zhang
-home_description: Hi, I'm a first year Ph.D. student in North Carolina State University.
+home_description: Hi, I'm currently a Ph.D. student in North Carolina State University.
 
   
 theme:
