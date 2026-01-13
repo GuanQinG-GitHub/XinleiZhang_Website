@@ -6,11 +6,7 @@ hide:
 ---
 
 # Curriculum Vitae
+Latest update: 13-Jan-2026
+<iframe src="CV_Xinlei_Jan_13_2026.pdf" width="80%" height="800px" style="border: 1px solid #ccc;"></iframe>
 
-[Click here to view the pdf form of Xinlei's CV (one-page-version)](CV_one_page_xinlei_250104.pdf).
-
-Latest update: 01-04-2025
-
-[Click here to view the pdf form of Xinlei's CV (long-version)](CV_long_LTS_20250320.pdf).
-
-Latest update: 11-06-2024
+<!-- [Click here to download the PDF](CV_Xinlei_Jan_13_2026.pdf). -->
