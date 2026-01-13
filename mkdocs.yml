@@ -45,22 +45,22 @@ nav:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md 
  - Research Project Gallery:
    - Research_Projects/index.md
-   - ZSG-MPPI: Research_Projects/ZSG-MPPI/ZSG-MPPI.md
-   - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
-   - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
+  #  - ZSG-MPPI: Research_Projects/ZSG-MPPI/ZSG-MPPI.md
+  #  - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
+  #  - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
     
  - Course Project Gallery:
    - Course_Projects/index.md
-   - NCSU:
-     - MAE589 2024Fall: Course_Projects/NCSU/MAE589-2024Fall/MAE589.md
-     - DSC595 2024Fall: Course_Projects/NCSU/DSC595-2024Fall/DSC595.md
-     - CSC791 2025Spring: 
-       - Q-Learning: Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/Wall_following.md
-       - Particle Filter: Course_Projects/NCSU/CSC791-2025Spring/Particle_Filter/particle_filter.md
-   - SCUT:
-     - SharpShooters: Course_Projects/SharpShooters.md
-     - Data Analysis 2022Fall: Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld.md
-     - Big Data 2021Fall: Course_Projects/SCUT/BigData-2021Fall/PPP.md
+  #  - NCSU:
+  #    - MAE589 2024Fall: Course_Projects/NCSU/MAE589-2024Fall/MAE589.md
+  #    - DSC595 2024Fall: Course_Projects/NCSU/DSC595-2024Fall/DSC595.md
+  #    - CSC791 2025Spring: 
+  #      - Q-Learning: Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/Wall_following.md
+  #      - Particle Filter: Course_Projects/NCSU/CSC791-2025Spring/Particle_Filter/particle_filter.md
+  #  - SCUT:
+  #    - SharpShooters: Course_Projects/SharpShooters.md
+  #    - Data Analysis 2022Fall: Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld.md
+  #    - Big Data 2021Fall: Course_Projects/SCUT/BigData-2021Fall/PPP.md
  - CV: 
    - CV/index.md
  - Random Notes:
