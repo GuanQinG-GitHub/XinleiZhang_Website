@@ -12,6 +12,8 @@ Please see my [Google Scholar](https://scholar.google.com/citations?user=ztAdTAo
 
 <iframe src="https://www.youtube.com/embed/SEYBzZ-iOJU" allowfullscreen width="100%" height="450" frameborder="0"></iframe>
 
+- This work has been presented at the CORAL seminar at NCSU on 2026-05-13. [Slides Link](https://oitncsu-my.sharepoint.com/:p:/g/personal/xzhan245_ncsu_edu/IQDQb8lec6-qRJ02AmE31aaYAbSt0groZOQ5HW71Ub1UU3c?e=R9rvFs)
+
 </div>
 
 <hr>
