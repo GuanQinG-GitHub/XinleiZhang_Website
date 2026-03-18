@@ -6,6 +6,8 @@
 
 ### ECE 572 - Fall 2025: Learning-Based Stochastic Optimization for Robotics: Diffusion Policy
 
+Please [click here](https://github.com/GuanQinG-GitHub/XinleiZhang_Website/blob/main/docs/Course_Projects/NCSU/ECE572-2025Fall/Report.pdf) to access the full report.
+
 <figure markdown>
   ![](NCSU/ECE572-2025Fall/Diffusion.png){ width="1000" }
   <figcaption>Diffusion Policy for Push-T Task. Three rows indicate three initializations</figcaption>
