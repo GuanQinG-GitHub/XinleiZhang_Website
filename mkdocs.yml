@@ -64,10 +64,20 @@ nav:
  - CV: 
    - CV/index.md
  - Random Notes:
-   - Git: Course_Notes/Others/how_to_use_git.md
-   - SSH: Course_Notes/Others/how_to_use_ssh.md
-   - Docker: Course_Notes/Others/how_to_use_docker.md
-   - Matlab GPU Toolbox: Course_Notes/Others/how_to_use_matlab_GPU_toolbox.md
+   - Research:
+     - HJ Reachability:
+       - Course_Notes/Research/HJ_Reachability/index.md
+       - Problem Definition: Course_Notes/Research/HJ_Reachability/Problem_Definition.md
+       - Computation Methods:
+         - Course_Notes/Research/HJ_Reachability/Computation_Methods/index.md
+         - DeepReach: Course_Notes/Research/HJ_Reachability/Computation_Methods/DeepReach.md
+         - Minimax Actor–Critic RL: Course_Notes/Research/HJ_Reachability/Computation_Methods/Minimax_Actor_Critic_RL.md
+     - Hopf–Lax Formula: Course_Notes/Research/Hopf_Lax_Formula.md
+   - Misc:
+     - Git: Course_Notes/Others/how_to_use_git.md
+     - SSH: Course_Notes/Others/how_to_use_ssh.md
+     - Docker: Course_Notes/Others/how_to_use_docker.md
+     - Matlab GPU Toolbox: Course_Notes/Others/how_to_use_matlab_GPU_toolbox.md
 #  - Award & Honor:
 #    - Awards/index.md
 #    - 2023 MCM: Awards/2023MCM/2023MCM.md
@@ -146,7 +156,11 @@ extra_javascript:
   # latex支持
   # check https://squidfunk.github.io/mkdocs-material/reference/mathjax/?h=math for more information
   # notice `curl https://polyfill.io/v3/polyfill.min.js?features=es6 > docs/mkdocs/javascripts/polyfill.min.js && curl https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js > docs/mkdocs/javascripts/tex-mml-chtml.js` not works... because there are other resources that need to load
-  - mkdocs/javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+  # KaTeX renders much faster than MathJax: https://squidfunk.github.io/mkdocs-material/reference/math/#katex
+  - mkdocs/javascripts/katex.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
 
