@@ -1,0 +1,15 @@
+/* Tighten spacing around display equations (KaTeX + arithmatex) */
+.md-typeset div.arithmatex > span {
+  display: block;
+}
+
+.md-typeset div.arithmatex .katex-display {
+  margin: 0;
+  padding: 0.2em 0;
+}
+
+/* Allow horizontal scroll for wide equations, but no stray vertical scrollbar */
+.md-typeset div.arithmatex {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
