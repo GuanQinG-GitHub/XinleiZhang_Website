@@ -1,0 +1,39 @@
+/* Tighten spacing around display equations (KaTeX + arithmatex) */
+.md-typeset div.arithmatex > span {
+  display: block;
+}
+
+.md-typeset div.arithmatex .katex-display {
+  margin: 0;
+  padding: 0.2em 0;
+}
+
+/* Allow horizontal scroll for wide equations, but no stray vertical scrollbar */
+.md-typeset div.arithmatex {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Site-wide font: Times New Roman */
+:root {
+  --md-text-font: "Times New Roman";
+  --md-text-font-family: "Times New Roman", Times, serif;
+  --md-code-font-family: "Times New Roman", Times, serif;
+}
+body, input, button, select, textarea,
+.md-typeset, .md-header, .md-tabs, .md-nav, .md-search__input, .md-footer {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Larger header title and navigation tabs (Times New Roman reads small) */
+.md-header__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.md-tabs__link {
+  font-size: .9rem;
+  margin-top: .5rem;
+}
+.md-tabs__item {
+  height: 2.8rem;
+}
