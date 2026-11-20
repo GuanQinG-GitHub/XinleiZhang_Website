@@ -5,274 +5,660 @@
 {{ super() }}
 
 <style>
-    .md-main {
-        flex-grow: 0
-    }
+  /* ---------- Page scaffolding ---------- */
+  .md-main { flex-grow: 0; }
+  .md-main__inner { display: flex; height: 100%; }
 
-    .md-main__inner {
-        display: flex;
-        height: 100%;
-    }
+  /* ---------- Hero ---------- */
+  .hp-hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(255, 152, 0, .22), transparent 40%),
+      radial-gradient(circle at 10% 90%, rgba(121, 134, 203, .35), transparent 45%),
+      linear-gradient(135deg, #1a237e 0%, #283593 45%, #3949ab 100%);
+    background-color: #1a237e;
+  }
+  /* ---- background photo: full photo on the left, fading into dark indigo ---- */
+  .hp-hero[style*="--hp-hero-bg"] {
+    background:
+      linear-gradient(90deg, #26318c 0%, #6a78c8 50%, #26318c 100%);
+  }
+  .hp-hero[style*="--hp-hero-bg"]::before {
+    display: block;
+    inset: 0 auto 0 0;            /* top/bottom/left = 0, natural width */
+    height: 100%;
+    aspect-ratio: 4 / 3;          /* left photo is landscape 4:3 */
+    max-width: 55%;
+    background:
+      linear-gradient(rgba(26,35,126,.22), rgba(26,35,126,.22)),
+      var(--hp-hero-bg) right top / auto 130% no-repeat;  /* enlarged, top/right-anchored: plane sits lower and further left */
+    -webkit-mask-image: linear-gradient(90deg, #000 40%, rgba(0,0,0,.7) 70%, transparent 100%);
+            mask-image: linear-gradient(90deg, #000 40%, rgba(0,0,0,.7) 70%, transparent 100%);
+  }
 
-    .tx-container {
-        padding-top: 0;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), #fff 99%, #fff 99%);
-    }
+  /* second photo on the right, fading in from the middle; tinted darker for the text on top */
+  .hp-hero[style*="--hp-hero-bg2"]::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 auto;
+    height: 100%;
+    aspect-ratio: 3 / 4;          /* right photo is portrait 3:4 */
+    min-width: 62%;
+    background:
+      linear-gradient(rgba(17,22,79,.35), rgba(17,22,79,.35)),
+      var(--hp-hero-bg2) center 80% / cover no-repeat;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.7) 30%, #000 55%);
+            mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.7) 30%, #000 55%);
+    pointer-events: none;
+  }
+  .hp-hero__inner { z-index: 1; }
+  .hp-hero[style*="--hp-hero-bg"] .hp-hero__text { text-shadow: 0 1px 8px rgba(10,14,50,.55); }
+  .hp-hero .hp-link, .hp-hero .hp-banner { text-shadow: none; }
 
-    .tx-hero {
-        margin: 32px 2.8rem;
-        color: var(--md-primary-bg-color);
-        justify-content: center;
-    }
+  /* ---- merge the top bar into the hero (home page only) ---- */
+  .hp-hero { margin-top: calc(-1 * var(--hp-header-h, 5.2rem)); }
+  .hp-hero .hp-hero__inner { padding-top: calc(3.5rem + var(--hp-header-h, 5.2rem)); }
+  body:not(.hp-scrolled) .md-header,
+  body:not(.hp-scrolled) .md-tabs {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .md-header, .md-tabs { transition: background-color .3s ease, box-shadow .3s ease; }
 
-    .tx-hero h1 {
-        margin-bottom: 1rem;
-        color: currentColor;
-        font-weight: 700;
-    }
+  /* faint dot grid for texture */
+  .hp-hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none;
+  }
+  .hp-hero__inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;      /* photo sits level with the name */
+    gap: 3.5rem;
+    padding: 4rem 1.2rem 4.5rem;
+  }
+  .hp-hero__photo {
+    flex: 0 0 15rem;
+    width: 15rem; height: 15rem;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #ffb74d, #ff9800 40%, #7986cb);
+    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  }
+  .hp-hero__photo img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    display: block;
+  }
+  .hp-hero__text { flex: 1; min-width: 0; }
 
-    .tx-hero__content {
-        padding-bottom: 1rem;
-        margin: 0 auto;
-    }
+  .md-typeset.hp-hero h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 .4rem;
+    letter-spacing: .01em;
+  }
+  .hp-hero__role {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: rgba(255,255,255,.85);
+    margin: 0 0 1.2rem;
+  }
+  .hp-hero__bio p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,.92);
+    margin: 0 0 .8rem;
+    max-width: 44rem;
+  }
+  .hp-hero__bio a { color: #ffcc80; }
+  .hp-hero__bio p.hp-label { margin: 0 0 .3rem; font-size: 1.15rem; color: #fff; }
+  .hp-hero__bio p.hp-label strong { font-weight: 700; }
+  .hp-hero__bio p.hp-label ~ p.hp-label { margin-top: 1rem; }
+  .hp-hero__bio + .hp-chips { margin-top: .3rem; }
 
-    .tx-hero__image {
-        width: 12rem;
-        height: 12rem;
-        order: 1;
-        padding-right: 2.5rem;
-    }
+  /* research-interest chips */
+  .hp-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.1rem 0 1.4rem; }
+  .hp-chip {
+    font-size: .85rem;
+    padding: .25rem .8rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+    color: #fff;
+    max-width: 100%;
+  }
 
-    .tx-hero__image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        /* border-radius: 50%; */ /* This makes the image circular */
-    }
+  /* social / link buttons */
+  .hp-links { display: flex; flex-wrap: wrap; gap: .7rem; }
+  .md-typeset .hp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: .95rem;
+    font-weight: 700;
+    color: #1a237e;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.2);
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .md-typeset .hp-link:hover {
+    color: #1a237e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0,0,0,.28);
+    background: #fff3e0;
+  }
+  .hp-link svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
 
-    .biography-section {
-        background-color: #f5f5f5;
-        padding: 2rem 0;
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        margin-bottom: 2rem;
-    }
+  /* ---------- Internship banner ---------- */
+  .md-typeset .hp-banner {
+    display: inline-flex; align-items: center; gap: .7rem;
+    margin-top: 1.3rem;
+    padding: .7rem 1.3rem;
+    border-radius: 12px;
+    font-size: 1.1rem; font-weight: 700;
+    letter-spacing: .01em;
+    color: #3e2000;
+    background: linear-gradient(90deg, #ffb74d, #ff9800 55%, #ffa726);
+    box-shadow: 0 6px 20px rgba(255,152,0,.35);
+  }
+  .hp-banner__pulse {
+    position: relative; flex: 0 0 auto;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #1b5e20;
+  }
+  .hp-banner__pulse::after {
+    content: ""; position: absolute; inset: 0; border-radius: 50%;
+    background: #2e7d32;
+    animation: hp-pulse 1.6s ease-out infinite;
+  }
+  @keyframes hp-pulse {
+    0%   { transform: scale(1);   opacity: .8; }
+    100% { transform: scale(2.8); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .hp-banner__pulse::after { animation: none; } }
 
-    .biography-content {
-        max-width: 61rem;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
+  /* ---------- Projects ---------- */
+  .hp-projects { padding: 3.5rem 1.2rem 4rem; }
+  .hp-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 19rem;
+    gap: 2.6rem;
+    align-items: start;
+  }
+  .hp-section-head { text-align: left; margin-bottom: 1.8rem; }
+  .md-typeset .hp-section-head h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 .4rem;
+    color: var(--md-default-fg-color);
+  }
+  .hp-section-head p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--md-default-fg-color--light);
+  }
+  .hp-section-head::after {
+    content: "";
+    display: block;
+    width: 64px; height: 4px;
+    margin: .9rem 0 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #3949ab, #ff9800);
+  }
 
-    .biography-section h1 {
-        color: #444;
-        margin-bottom: 1rem;
-        font-size: 2.5em; /* Adjust size as needed */
-    }
+  .hp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+  .hp-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    overflow: hidden;
+    color: inherit;
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .hp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgba(26,35,126,.18);
+    border-color: #7986cb;
+  }
+  .hp-card__fig {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #fff;
+    overflow: hidden;
+  }
+  .hp-card__fig img,
+  .hp-card__fig video {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform .35s ease;
+  }
+  .hp-card:hover .hp-card__fig img { transform: scale(1.04); }
+  .hp-card__fig video { object-fit: cover; background: #000; }
+  .hp-card__fig video.fit-contain { object-fit: contain; background: #fff; }
+  .hp-card__fig img.fit-contain { object-fit: contain; }
+  .hp-courses {
+    background:
+      radial-gradient(circle at 100% 0%, rgba(255,152,0,.08), transparent 35%),
+      linear-gradient(180deg, #eef0fa 0%, #f6f7fc 100%);
+    border-top: 1px solid rgba(57,73,171,.12);
+  }
+  [data-md-color-scheme="slate"] .hp-courses {
+    background: linear-gradient(180deg, rgba(121,134,203,.10) 0%, rgba(121,134,203,.04) 100%);
+    border-top-color: rgba(159,168,218,.15);
+  }
+  .hp-courses .hp-card { box-shadow: 0 4px 16px rgba(26,35,126,.08); }
+  .hp-outreach { border-top: 1px solid rgba(57,73,171,.12); }
+  [data-md-color-scheme="slate"] .hp-outreach { border-top-color: rgba(159,168,218,.15); }
+  .hp-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md-typeset h3.hp-subhead {
+    display: flex; align-items: center; gap: .8rem;
+    margin: 0 0 1.2rem;
+    font-size: 1.35rem; font-weight: 700;
+    letter-spacing: .02em;
+    color: #3949ab;
+  }
+  .md-typeset h3.hp-subhead::after {
+    content: ""; flex: 1; height: 1px;
+    background: rgba(57,73,171,.2);
+  }
+  .md-typeset .hp-grid + h3.hp-subhead { margin-top: 2.6rem; }
+  [data-md-color-scheme="slate"] .md-typeset h3.hp-subhead { color: #9fa8da; }
+  @media screen and (max-width: 76.1875em) {
+    .hp-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  .md-typeset .hp-card__body h3 a { color: inherit; }
+  .md-typeset .hp-card__body h3 a:hover { color: #3949ab; }
 
-    .biography-section p {
-        color: #444;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-        font-size: 1.5em; /* Adjust size as needed */
-    }
+  /* per-project link buttons (Paper, Video, Code, ...) */
+  .hp-card__links { display: flex; flex-wrap: wrap; gap: .45rem; margin: .2rem 0 .8rem; }
+  .md-typeset .hp-card__links a {
+    display: inline-flex; align-items: center; gap: .35rem;
+    padding: .28rem .7rem;
+    border-radius: 8px;
+    font-size: .85rem; font-weight: 700;
+    color: #fff;
+    background: #3949ab;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .md-typeset .hp-card__links a:hover { color: #fff; background: #1a237e; transform: translateY(-1px); }
+  .md-typeset .hp-card__links a.is-video { background: #d32f2f; }
+  .md-typeset .hp-card__links a.is-video:hover { background: #b71c1c; }
+  .md-typeset .hp-card__links a.is-code { background: #24292f; }
+  .md-typeset .hp-card__links a.is-code:hover { background: #000; }
+  .hp-card__links svg { width: 1rem; height: 1rem; fill: currentColor; }
+  .hp-card__links .is-static {
+    display: inline-flex; align-items: center; gap: .35rem;
+    padding: .28rem .7rem;
+    border-radius: 8px;
+    font-size: .85rem; font-weight: 700;
+    color: var(--md-default-fg-color--light);
+    background: var(--md-default-fg-color--lightest);
+    cursor: default;
+  }
+  .hp-card__placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-style: italic;
+    color: #5c6bc0;
+    background:
+      repeating-linear-gradient(45deg, rgba(57,73,171,.05) 0 12px, transparent 12px 24px),
+      linear-gradient(135deg, #e8eaf6, #fff3e0);
+  }
+  .hp-card__tag {
+    position: absolute; top: .7rem; left: .7rem;
+    font-size: .75rem; font-weight: 700;
+    letter-spacing: .04em; text-transform: uppercase;
+    padding: .2rem .6rem;
+    border-radius: 6px;
+    color: #fff;
+    background: rgba(26,35,126,.85);
+  }
+  .hp-card__body { padding: 1.1rem 1.2rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
+  .md-typeset .hp-card__body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 .5rem;
+    color: var(--md-default-fg-color);
+  }
+  .hp-card__body p {
+    font-size: .95rem;
+    line-height: 1.5;
+    margin: 0 0 .8rem;
+    color: var(--md-default-fg-color--light);
+  }
+  .hp-card__body p.hp-card__desc { color: var(--md-default-fg-color); }
+  .hp-card__kw { margin-top: auto; display: flex; flex-wrap: wrap; gap: .35rem; }
+  .hp-card__kw span {
+    font-size: .75rem;
+    padding: .1rem .55rem;
+    border-radius: 999px;
+    color: #3949ab;
+    background: rgba(57,73,171,.08);
+  }
+  [data-md-color-scheme="slate"] .hp-card__kw span { color: #9fa8da; background: rgba(159,168,218,.12); }
+  [data-md-color-scheme="slate"] .hp-card:hover { box-shadow: 0 16px 34px rgba(0,0,0,.5); }
 
-    .axiom-section {
-        background-color: #fafafa;
-        padding: 2rem 0;
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        margin-bottom: 2rem;
-    }
+  /* ---------- Recent News ---------- */
+  .hp-news {
+    padding: 1.5rem 1.4rem 1rem;
+    border-radius: 14px;
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  }
+  .hp-news .hp-section-head { margin-bottom: 1.2rem; }
+  .md-typeset .hp-news .hp-section-head h2 { font-size: 1.6rem; }
+  .md-typeset ul.hp-news__list {
+    list-style: none;
+    margin: 0; padding: 0 0 0 6px;
+  }
+  .md-typeset ul.hp-news__list li.hp-news__item {
+    position: relative;
+    margin: 0;
+    padding: 0 0 1.1rem 1.2rem;
+    border-left: 2px solid rgba(57,73,171,.2);
+  }
+  .md-typeset ul.hp-news__list li.hp-news__item:last-child { padding-bottom: .3rem; }
+  .hp-news__item::before {
+    content: "";
+    position: absolute; left: -6px; top: .35rem;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #ff9800;
+    box-shadow: 0 0 0 3px var(--md-default-bg-color);
+  }
+  .hp-news__date {
+    display: block;
+    font-size: .8rem; font-weight: 700;
+    letter-spacing: .05em; text-transform: uppercase;
+    color: #3949ab;
+    margin-bottom: .15rem;
+  }
+  [data-md-color-scheme="slate"] .hp-news__date { color: #9fa8da; }
+  .hp-news__text { font-size: .95rem; line-height: 1.5; color: var(--md-default-fg-color--light); }
+  .md-typeset .hp-news__text a { color: #3949ab; font-weight: 700; }
+  .md-typeset .hp-news__text a:hover { color: #ff9800; }
+  [data-md-color-scheme="slate"] .md-typeset .hp-news__text a { color: #9fa8da; }
 
-    .axiom-content {
-        max-width: 61rem;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
 
-    .axiom-section h1 {
-        color: #444;
-        margin-bottom: 1rem;
-        font-size: 2.5em; /* Adjust size as needed */
-    }
+  /* ---------- Right-side table of contents ---------- */
+  html { scroll-behavior: smooth; }
+  #about, #research, #news, #courses, #courses-grad, #courses-undergrad, #outreach { scroll-margin-top: 6rem; }
+  .hp-toc {
+    position: fixed;
+    right: 1.2rem; top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex; flex-direction: column; align-items: flex-end; gap: .55rem;
+    padding: .7rem .6rem;
+    border-radius: 14px;
+    background: rgba(255,255,255,.75);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    box-shadow: 0 4px 18px rgba(26,35,126,.12);
+  }
+  [data-md-color-scheme="slate"] .hp-toc { background: rgba(30,33,48,.8); box-shadow: 0 4px 18px rgba(0,0,0,.4); }
+  .hp-toc a {
+    display: flex; align-items: center; gap: .6rem;
+    font-size: .8rem; line-height: 1.2;
+    color: var(--md-default-fg-color--light);
+    text-decoration: none;
+  }
+  .hp-toc__label {
+    max-width: 0; overflow: hidden; white-space: nowrap;
+    opacity: 0;
+    transition: max-width .25s ease, opacity .2s ease;
+  }
+  .hp-toc:hover .hp-toc__label { max-width: 12rem; opacity: 1; }
+  .hp-toc__dot {
+    flex: 0 0 auto;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: rgba(57,73,171,.3);
+    transition: transform .2s ease, background .2s ease;
+  }
+  .hp-toc a.is-sub .hp-toc__dot { width: 6px; height: 6px; margin: 0 1.5px; }
+  .hp-toc a.is-sub { font-size: .75rem; }
+  .hp-toc a:hover { color: #3949ab; }
+  .hp-toc a:hover .hp-toc__dot { background: #3949ab; }
+  .hp-toc a.is-active { color: #3949ab; font-weight: 700; }
+  .hp-toc a.is-active .hp-toc__dot { background: #ff9800; transform: scale(1.35); }
+  [data-md-color-scheme="slate"] .hp-toc a:hover,
+  [data-md-color-scheme="slate"] .hp-toc a.is-active { color: #9fa8da; }
+  /* wide screens: always show the labels */
+  @media screen and (min-width: 100em) {
+    .hp-toc__label { max-width: 12rem; opacity: 1; }
+  }
+  @media screen and (max-width: 60em) {
+    .hp-toc { display: none; }
+  }
 
-    .axiom-section p {
-        color: #444;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-        font-size: 1.5em; /* Adjust size as needed */
-    }
-
-    .project-section {
-        background-color: #fff;
-        padding: 2rem 0;
-        border-top: 1px solid #eee;
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        margin-bottom: 2rem;
-    }
-
-    .project-content {
-        max-width: 61rem;
-        margin: 0 auto;
-        padding: 0 1rem;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .project-gif {
-        flex: 0 0 40%;
-        max-width: 40%;
-    }
-
-    .project-gif img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .project-description {
-        flex: 1;
-    }
-
-    .project-section h2 {
-        color: #444;
-        margin-bottom: 1rem;
-        font-size: 2em;
-    }
-
-    .project-section p {
-        color: #444;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-        font-size: 1.2em;
-    }
-
-    @media screen and (max-width: 768px) {
-        .project-content {
-            flex-direction: column;
-        }
-        
-        .project-gif {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
-
-    @media screen and (max-width:30em) {
-        .tx-hero h1 {
-            font-size: 1.4rem
-        }
-    }
-
-    @media screen and (min-width:60em) {
-        .md-sidebar--secondary {
-            display: none
-        }
-
-        .tx-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .tx-hero__content {
-            max-width: 22rem;
-            margin-top: 3.5rem;
-            margin-bottom: 3.5rem;
-            margin-left: 1.0rem;
-            margin-right: 4.0rem;
-            align-items: center;
-        }
-    }
-
-    @media screen and (min-width:76.25em) {
-        .md-sidebar--primary {
-            display: none
-        }
-    }
-
-    .md-footer-meta__inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 1.0rem;
-    }
-
-    .md-footer-social {
-        padding-top: 20px;
-    }
+  /* ---------- Responsive ---------- */
+  @media screen and (max-width: 60em) {
+    .hp-split { grid-template-columns: minmax(0, 1fr); gap: 2.4rem; }
+    .hp-split__side { position: static; order: -1; }
+  }
+  @media screen and (max-width: 48em) {
+    .hp-hero .hp-hero__inner { flex-direction: column; align-items: center; text-align: center; gap: 1.8rem; padding: calc(2.5rem + var(--hp-header-h, 2.4rem)) 1rem 3rem; }
+    .hp-hero__photo { flex-basis: auto; width: 11rem; height: 11rem; }
+    .md-typeset.hp-hero h1 { font-size: 2.2rem; }
+    .hp-hero__bio p { margin-left: auto; margin-right: auto; }
+    .hp-chips, .hp-links { justify-content: center; }
+    .hp-grid, .hp-grid--3 { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary { display: none; }
+  }
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary { display: none; }
+  }
 </style>
 
-<!-- Main site entry button descriptions -->
-<section class="tx-container">
-    <div class="md-grid md-typeset">
-      <div class="tx-hero">
-      
-        <!-- Custom Image -->
-        <div class="tx-hero__image">
-          <img src="{{ config.home_cover_image }}" draggable="false" alt="Profile Picture">
+<!-- ================= Hero: photo + name + bio + links ================= -->
+<section id="about" class="hp-hero md-typeset"{% if config.home_hero_bg %} style="--hp-hero-bg: url('{{ config.home_hero_bg | url }}'){% if config.home_hero_bg2 %}; --hp-hero-bg2: url('{{ config.home_hero_bg2 | url }}'){% endif %}"{% endif %}>
+  <div class="md-grid hp-hero__inner">
+    <div class="hp-hero__photo">
+      <img src="{{ config.home_cover_image | url }}" draggable="false" alt="Portrait of {{ config.home_tagline }}">
+    </div>
+
+    <div class="hp-hero__text">
+      <h1>{{ config.home_tagline }}</h1>
+      <p class="hp-hero__role">{{ config.home_role }}</p>
+
+      <div class="hp-hero__bio">
+        {% include "biography_content.html" %}
+      </div>
+
+      {% if config.home_interests %}
+      <div class="hp-chips">
+        {% for t in config.home_interests %}<span class="hp-chip">{{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="hp-links">
+        {% for l in config.home_links %}
+        <a class="hp-link"
+           href="{{ l.url if '://' in l.url or l.url.startswith('mailto:') else (l.url | url) }}"
+           {% if '://' in l.url %}target="_blank" rel="noopener"{% endif %}
+           title="{{ l.name }}">
+          {% include ".icons/" ~ l.icon ~ ".svg" %}<span>{{ l.name }}</span>
+        </a>
+        {% endfor %}
+      </div>
+
+      {% if config.home_banner %}
+      <div class="hp-banner">
+        <span class="hp-banner__pulse"></span>
+        <span>{{ config.home_banner.text }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% macro card(p) %}
+      <div class="hp-card">
+        <div class="hp-card__fig">
+          {% if p.video %}
+            <video{% if p.fit %} class="fit-{{ p.fit }}"{% endif %} src="{{ p.video | url }}{% if p.start %}#t={{ p.start }}{% endif %}"{% if p.poster %} poster="{{ p.poster | url }}"{% endif %}
+                   {% if p.start %}onended="this.currentTime={{ p.start }};this.play()"{% else %}loop{% endif %}
+                   autoplay muted playsinline preload="metadata" aria-label="{{ p.title }}"></video>
+          {% elif p.image %}
+            <img{% if p.fit %} class="fit-{{ p.fit }}"{% endif %} src="{{ p.image | url }}" alt="{{ p.title }}" loading="lazy">
+          {% else %}
+            <div class="hp-card__placeholder">{{ p.placeholder or "Figure coming soon" }}</div>
+          {% endif %}
+          {% if p.tag %}<span class="hp-card__tag">{{ p.tag }}</span>{% endif %}
         </div>
-    
-        <!-- Main Tagline -->
-        <div class="tx-hero__content">
-          <h1>{{ config.home_tagline }}</h1>
-          <p>{{ config.home_description }}</p>
+        <div class="hp-card__body">
+          <h3>{% if p.link %}<a href="{{ p.link | url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+          {% if p.summary %}<p>{{ p.summary }}</p>{% endif %}
+          {% if p.description %}<p class="hp-card__desc">{{ p.description }}</p>{% endif %}
+          {% if p.links %}
+          <div class="hp-card__links">
+            {% for l in p.links %}
+            {% if l.url %}
+            <a href="{{ l.url if '://' in l.url else (l.url | url) }}" target="_blank" rel="noopener"{% if 'youtube' in l.icon or 'bilibili' in l.icon or 'weixin' in l.icon %} class="is-video"{% elif 'github' in l.icon %} class="is-code"{% endif %}>
+              {% include ".icons/" ~ l.icon ~ ".svg" %}<span>{{ l.name }}</span>
+            </a>
+            {% else %}
+            <span class="is-static">{% include ".icons/" ~ l.icon ~ ".svg" %}<span>{{ l.name }}</span></span>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% if p.keywords %}
+          <div class="hp-card__kw">{% for k in p.keywords %}<span>{{ k }}</span>{% endfor %}</div>
+          {% endif %}
         </div>
       </div>
+{% endmacro %}
+
+<!-- ================= Project matrix ================= -->
+<section id="research" class="hp-projects md-typeset">
+  <div class="md-grid hp-split">
+   <div class="hp-split__main">
+    <div class="hp-section-head">
+      <h2>Research Works</h2>
+      <p>Safe, Robust and Computationally Efficient Controllers for Robotics</p>
     </div>
+
+    <div class="hp-grid">
+      {% for p in config.home_projects %}{{ card(p) }}{% endfor %}
+    </div>
+
+   </div>
+
+   <!-- ---------- Recent News column ---------- -->
+   <aside id="news" class="hp-split__side">
+    <div class="hp-news">
+      <div class="hp-section-head">
+        <h2>Recent News</h2>
+      </div>
+      <ul class="hp-news__list">
+        {% for n in config.home_news %}
+        <li class="hp-news__item">
+          <span class="hp-news__date">{{ n.date }}</span>
+          <div class="hp-news__text">{{ n.text }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+   </aside>
+  </div>
 </section>
 
-<!-- Biography Section -->
-<section class="biography-section">
-    <div class="biography-content">
-        <h1>Biography</h1>
-        {% include "biography_content.html" %}
+<!-- ================= Course projects (full-width tinted band) ================= -->
+<section id="courses" class="hp-projects hp-courses md-typeset">
+  <div class="md-grid">
+    <div class="hp-section-head">
+      <h2>Selected Course Projects</h2>
     </div>
+    <h3 id="courses-grad" class="hp-subhead">Graduate · NCSU</h3>
+    <div class="hp-grid hp-grid--3">
+      {% for p in config.home_courses if p.level != 'undergrad' %}{{ card(p) }}{% endfor %}
+    </div>
+
+    <h3 id="courses-undergrad" class="hp-subhead">Undergraduate · SCUT</h3>
+    <div class="hp-grid hp-grid--3">
+      {% for p in config.home_courses if p.level == 'undergrad' %}{{ card(p) }}{% endfor %}
+    </div>
+  </div>
 </section>
 
-<!-- Axiom Section -->
-<!-- <section class="axiom-section">
-    <div class="axiom-content">
-        <h1>Axiom</h1>
-        <p>
-          "An optimal policy has the property that, whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision."
-        </p>
-        <p style="text-align: right;">
-          — Richard Bellman, Dynamic Programming (1957)
-        </p>
+<!-- ================= Outreach & Teaching ================= -->
+<section id="outreach" class="hp-projects hp-outreach md-typeset">
+  <div class="md-grid">
+    <div class="hp-section-head">
+      <h2>Outreach &amp; Teaching</h2>
     </div>
-</section> -->
-<!-- Project Section Template -->
-<!-- <section class="project-section">
-    <div class="project-content">
-        <div class="project-gif">
-            <img src="{{ 'Research_Projects/Multiple_magnet_tracking/multiple_magnet_tracking.gif' | url }}" alt="Project Demo">
-        </div>
-        <div class="project-description">
-            <h2>
-                <a href="{{ 'Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking' | url }}" target="_blank" style="color: blue;">Simutaneously Pose Tracking of 3 Free-Moving Permanent Magnets with a Stationary 9-Sensor-Array</a>
-            </h2>
-            <p>
-                Keywords: Magnetic pose estimation, extended Kalman filter
-            </p>
-        </div>
+    <div class="hp-grid hp-grid--3">
+      {% for p in config.home_outreach %}{{ card(p) }}{% endfor %}
     </div>
-</section> -->
+  </div>
+</section>
 
-<!-- Toggleable JavaScript execution -->
-{%- if config.home_execute_js -%}
+
+<!-- ================= Right-side table of contents ================= -->
+<nav class="hp-toc" aria-label="On this page">
+  <a href="#about" data-target="about"><span class="hp-toc__label">About</span><span class="hp-toc__dot"></span></a>
+  <a href="#research" data-target="research"><span class="hp-toc__label">Research Works</span><span class="hp-toc__dot"></span></a>
+  <a href="#news" data-target="news"><span class="hp-toc__label">Recent News</span><span class="hp-toc__dot"></span></a>
+  <a href="#courses" data-target="courses"><span class="hp-toc__label">Course Projects</span><span class="hp-toc__dot"></span></a>
+  <a href="#courses-grad" data-target="courses-grad" class="is-sub"><span class="hp-toc__label">Graduate · NCSU</span><span class="hp-toc__dot"></span></a>
+  <a href="#courses-undergrad" data-target="courses-undergrad" class="is-sub"><span class="hp-toc__label">Undergraduate · SCUT</span><span class="hp-toc__dot"></span></a>
+  <a href="#outreach" data-target="outreach"><span class="hp-toc__label">Outreach &amp; Teaching</span><span class="hp-toc__dot"></span></a>
+</nav>
 <script>
-document$.subscribe(function() {
-  console.log("'home_execute_js' is enabled:");
-  {{ config.home_execute_js }}
-}).unsubscribe();
+(function () {
+  var header = document.querySelector('.md-header'), hero = document.getElementById('about');
+  function sizeHeader() {
+    if (header && hero) hero.style.setProperty('--hp-header-h', header.offsetHeight + 'px');
+  }
+  function solidHeader() {
+    if (!header || !hero) return;
+    var past = window.scrollY > hero.offsetHeight - header.offsetHeight - 10;
+    document.body.classList.toggle('hp-scrolled', past);
+  }
+  sizeHeader(); solidHeader();
+  window.addEventListener('resize', function () { sizeHeader(); solidHeader(); });
+  window.addEventListener('scroll', solidHeader, { passive: true });
+})();
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.hp-toc a'));
+  var targets = links.map(function (a) { return document.getElementById(a.dataset.target); });
+  function update() {
+    var y = window.scrollY + window.innerHeight * 0.3, active = 0;
+    // "Recent News" sits beside Research Works (same height), so it is skipped by the tracker
+    targets.forEach(function (t, i) {
+      if (t && t.id !== 'news' && t.getBoundingClientRect().top + window.scrollY <= y) active = i;
+    });
+    links.forEach(function (a, i) { a.classList.toggle('is-active', i === active); });
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
 </script>
-{%- endif -%}
-
 {% endblock %}
 {% block content %}{% endblock %}
 {% block footer %}{% endblock %}

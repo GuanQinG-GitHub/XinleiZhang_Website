@@ -9,6 +9,7 @@ site_description: Xinlei's Personal Website
 
 # [Navigation]
 nav:
+ - Home: index.md
   # - Project Gallery: 
   #  - Course_Notes/index.md
   #  - Random:
@@ -43,14 +44,10 @@ nav:
 #        - Lecture Summary 1: Course_Notes/SCUT/Classical_Control_Theory/Lecture_summary_1.md
  #    - Heat Transfer:
  #      - Week 7: Course_Notes/Heat_Transfer/Week_7.md 
- - Research Project Gallery:
-   - Research_Projects/index.md
   #  - ZSG-MPPI: Research_Projects/ZSG-MPPI/ZSG-MPPI.md
   #  - On Ambiguity in 6-DoF Magnetic Pose Estimation: Research_Projects/Ambiguity/On_Ambiguity_in_6-DoF_Magnetic_Pose_Estimation.md
   #  - Multiple Permanent Magnets Tracking: Research_Projects/Multiple_magnet_tracking/MultiMagnet_tracking.md
     
- - Course Project Gallery:
-   - Course_Projects/index.md
   #  - NCSU:
   #    - MAE589 2024Fall: Course_Projects/NCSU/MAE589-2024Fall/MAE589.md
   #    - DSC595 2024Fall: Course_Projects/NCSU/DSC595-2024Fall/DSC595.md
@@ -61,8 +58,6 @@ nav:
   #    - SharpShooters: Course_Projects/SharpShooters.md
   #    - Data Analysis 2022Fall: Course_Projects/SCUT/DataAnalysis-2022Fall/SmallWorld.md
   #    - Big Data 2021Fall: Course_Projects/SCUT/BigData-2021Fall/PPP.md
- - CV: 
-   - CV/index.md
  - Random Notes:
    - Research:
      - HJ Reachability:
@@ -98,12 +93,252 @@ nav:
 home_cover_image: MainPage/Profile_Xinlei - Circle.png
 home_cover_image_size: 20  # 200px / 16 = 12.5rem
 home_tagline: Xinlei Zhang
-home_description: Hi, I'm currently a Ph.D. student in North Carolina State University.
+home_hero_bg: MainPage/BG_2.jpg  # left background photo of the About section (landscape, path under docs/)
+home_hero_bg2: MainPage/BG.jpg  # right background photo of the About section (portrait)
+home_role: Third-year Ph.D. Student · Mechanical Engineering · North Carolina State University
+
+# Highlight banner under the buttons (delete this block to hide it)
+home_banner:
+  text: Actively looking for 2027 Summer Internships!
+
+# Chips shown under the bio
+home_interests:
+  - Safety-Critical Control & Robust Safety Filter
+  - Robust MPPI
+  - Computationally Efficient MPC
+  - Safe Reinforcement Learning
+  - Magnetic Pose Estimation in Medical Robotics
+
+# Buttons under the bio. icon = path under material's .icons folder (no .svg)
+home_links:
+  - name: Google Scholar
+    icon: fontawesome/brands/google-scholar
+    url: https://scholar.google.com/citations?user=ztAdTAoAAAAJ&hl=en&oi=ao
+  - name: GitHub
+    icon: fontawesome/brands/github
+    url: https://github.com/GuanQinG-GitHub
+  - name: CV
+    icon: material/file-document-outline
+    url: CV/CV_Xinlei_Jan_13_2026.pdf
+  - name: xzhan245@ncsu.edu
+    icon: material/email-outline
+    url: mailto:xzhan245@ncsu.edu
+
+# Recent News column on the home page (newest first). text may contain HTML, e.g. <a href="...">link</a>
+home_news:
+  - date: "Nov 11, 2026"
+    text: 'My second Ph.D. work, LCSF, was published in IEEE RA-L. <a href="https://ieeexplore.ieee.org/abstract/document/11789729/" target="_blank" rel="noopener">[Paper]</a> <a href="https://www.youtube.com/watch?v=sDkYr97jqcg&t=13s" target="_blank" rel="noopener">[Video]</a>'
+  - date: "Oct 16, 2026"
+    text: 'Presented my second Ph.D. work, LCSF, at the NCSU ICL &amp; HIER Joint Meeting. <a href="https://oitncsu-my.sharepoint.com/:b:/g/personal/xzhan245_ncsu_edu/IQDeiIuDaeyoTaHlParbC72tAS1gXekL6tPlTYAuNjlSCOY?e=Ishbeg" target="_blank" rel="noopener">[Slides]</a>'
+  - date: "Sep 28, 2026"
+    text: 'Presented my first Ph.D. work, ZSG-MPPI, at IROS 2026 in Pittsburgh. <a href="https://oitncsu-my.sharepoint.com/:p:/g/personal/xzhan245_ncsu_edu/IQCPhArBsm-xQY_f_SlNybcCAdgF_iXIRu_SfEcnRimX2b4?e=AhaCsJ" target="_blank" rel="noopener">[Slides]</a> <a href="Research_Projects/ZSG-MPPI/ZSG-MPPI-Poster.pdf" target="_blank" rel="noopener">[Poster]</a>'
+  - date: "May 21, 2026"
+    text: 'Presented my second Ph.D. work, LCSF, at the Honda Research Institute PC Seminar.'
+  - date: "Mar 13, 2026"
+    text: 'Presented ZSG-MPPI at the NCSU CORAL Seminar. <a href="https://oitncsu-my.sharepoint.com/:p:/g/personal/xzhan245_ncsu_edu/IQDQb8lec6-qRJ02AmE31aaYAbSt0groZOQ5HW71Ub1UU3c?e=GGFhTp" target="_blank" rel="noopener">[Slides]</a>'
+  - date: "Jan 23, 2026"
+    text: 'My undergraduate work was published in IEEE/ASME TMECH, on the magnetic pose estimation in medical robots. <a href="https://ieeexplore.ieee.org/abstract/document/11361397" target="_blank" rel="noopener">[Paper]</a> <a href="https://youtu.be/QhXpn2c9t2A" target="_blank" rel="noopener">[Video]</a>'
+  - date: "Oct 17, 2025"
+    text: 'My first Ph.D. work, ZSG-MPPI, was published in IEEE RA-L. <a href="https://ieeexplore.ieee.org/abstract/document/11206415" target="_blank" rel="noopener">[Paper]</a>'
+  - date: "May 29, 2025"
+    text: 'Presented my first Ph.D. work, ZSG-MPPI, at the Honda Research Institute PC Seminar.'
+  - date: "Jan 7, 2025"
+    text: 'Joined the <a href="https://sites.google.com/ncsu.edu/icl/" target="_blank" rel="noopener">Intelligent Controls Lab</a>, led by <a href="https://scholar.google.com/citations?user=2697yNYAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Dr. Donggun Lee</a>.'
+  - date: "Aug 2024"
+    text: 'Joined NC State University and started my Ph.D. journey.'
+
+# Project matrix on the home page (one card per entry).
+# image: path under docs/ (leave empty for a "Figure coming soon" placeholder)
+# video/poster: an mp4 (autoplays muted, looped) + its thumbnail, used instead of image
+# link:  page under docs/ the card title opens (optional)
+# links: buttons under the title, each {name, icon, url}; omit url for a non-clickable badge (e.g. Under Review)
+home_projects:
+  - title: Least Conservative Robust Safety Filter via Hamilton-Jacobi Reachability Analysis
+    video: Research_Projects/LCSF/LCSF-Exp.mp4
+    poster: Research_Projects/LCSF/LCSF-Exp-Thumbnail.jpg
+    links:
+      - name: Paper (2026 RA-L)
+        icon: material/file-document-outline
+        url: https://ieeexplore.ieee.org/abstract/document/11789729/
+      - name: Video
+        icon: fontawesome/brands/youtube
+        url: https://www.youtube.com/watch?v=sDkYr97jqcg&t=13s
+    keywords: [Robust Safety Filter, Safe Reinforcement Learning]
+  - title: Adaptive Reachability Safety (AReS) Filter for Systems with Unknown Dynamic Models
+    video: Research_Projects/AReS/plaza_ares.mp4
+    poster: Research_Projects/AReS/plaza_ares-Thumbnail.jpg
+    links:
+      - name: Paper (Under Review)
+        icon: material/file-document-outline
+      - name: Video
+        icon: fontawesome/brands/youtube
+        url: https://www.youtube.com/watch?v=lq1IJwMMt2g
+    keywords: [Adaptive Robust Safety Filter, Safe Reinforcement Learning]
+  - title: "ZSG-MPPI: Robust Model-Predictive Path-Integral Method for Disturbance Handling"
+    video: Research_Projects/ZSG-MPPI/ZSG-MPPI-Website.mp4
+    poster: Research_Projects/ZSG-MPPI/ZSG-MPPI-Website-Thumbnail.jpg
+    links:
+      - name: Paper (2025 RA-L)
+        icon: material/file-document-outline
+        url: https://ieeexplore.ieee.org/abstract/document/11206415
+      - name: Poster
+        icon: material/presentation
+        url: Research_Projects/ZSG-MPPI/ZSG-MPPI-Poster.pdf
+      - name: Video
+        icon: fontawesome/brands/youtube
+        url: https://www.youtube.com/watch?v=fxr_PS0Ufms
+    keywords: [Robust & Computationally Efficient MPPI, Safety & Performance]
+  - title: "Hopf–Lax-MPC: Generalized Hopf–Lax Formula-based Model Predictive Control for Long-Horizon Real-Time Applications"
+    video: Research_Projects/HopfLax/HopfLax.mp4
+    poster: Research_Projects/HopfLax/HopfLax-Thumbnail.jpg
+    links:
+      - name: In Preparation (First Page Preview)
+        icon: material/file-document-outline
+        url: Research_Projects/HopfLax/HopfLaxMPC_FirstPage.pdf
+    keywords: [Computationally Efficient MPC, Multi-Agent Navigation]
+  - title: On Ambiguity in 6-DoF Electromagnetic Pose Estimation Systems
+    video: Research_Projects/Ambiguity/Ambiguity-Website.mp4
+    poster: Research_Projects/Ambiguity/Ambiguity-Website-Thumbnail.jpg
+    links:
+      - name: Paper (2026 TMECH)
+        icon: material/file-document-outline
+        url: https://ieeexplore.ieee.org/abstract/document/11361397
+      - name: Video
+        icon: fontawesome/brands/youtube
+        url: https://youtu.be/QhXpn2c9t2A
+    keywords: [Magnetic Pose Estimation, Medical Robotics]
 
   
+# "Selected Course Works" cards on the home page (same fields as home_projects).
+# fit: contain  -> show the whole video/image (for non-16:9 media) instead of cropping
+# start: N      -> start (and loop back to) N seconds into the video
+# level: undergrad -> listed under "Undergraduate" (otherwise under "Graduate")
+home_courses:
+  - title: Safe Swing-up for Double-Pendulum-on-a-Cart via Constrained MPC and Direct Transcription
+    summary: MAE 589 · Spring 2026
+    video: Course_Projects/NCSU/MAE589-2026Spring/2026Spring_collocation_mpc_rollout.mp4
+    poster: Course_Projects/NCSU/MAE589-2026Spring/2026Spring_collocation_mpc_rollout-Thumbnail.jpg
+    fit: contain
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: Course_Projects/NCSU/MAE589-2026Spring/2026Spring_Report.pdf
+      - name: Demo Website
+        icon: material/web
+        url: https://guanqing-github.github.io/MAE589-2026Spring/
+      - name: GitHub
+        icon: fontawesome/brands/github
+        url: https://github.com/GuanQinG-GitHub/MAE589-2026Spring
+    keywords: [Trajectory Optimization, Direct Transcription]
+  - title: "Learning-Based Stochastic Optimization Methods: DDPM and Diffusion Policy for Robotic Decision-Making"
+    summary: ECE 572 · Fall 2025
+    video: Course_Projects/NCSU/ECE572-2025Fall/denoising_step_80.mp4
+    poster: Course_Projects/NCSU/ECE572-2025Fall/denoising_step_80-Thumbnail.jpg
+    fit: contain
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: Course_Projects/NCSU/ECE572-2025Fall/Report.pdf
+    keywords: [Stochastic Optimization, Diffusion Policy]
+  - title: Variable-Impedance Optimal Controller for Humanoid Ankle Joints
+    summary: MAE 589 · Fall 2025
+    video: Course_Projects/NCSU/MAE589-2025Fall/G1_pretrain_uneven_terrain.mp4
+    poster: Course_Projects/NCSU/MAE589-2025Fall/G1_pretrain_uneven_terrain-Thumbnail.jpg
+    fit: contain
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: Course_Projects/NCSU/MAE589-2025Fall/MAE589_2025Fall_Report.pdf
+    keywords: [Humanoid Control, Variable Impedance]
+  - title: Solving the Mobile Robot Wall-Following Problem by Q-Learning
+    summary: CSC 791 · Spring 2025
+    video: Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/wall_following_video_demo.mp4
+    poster: Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/wall_following_video_demo-Thumbnail.jpg
+    start: 12  # skip the white title slide (seconds)
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: Course_Projects/NCSU/CSC791-2025Spring/Q-Learning/Project_Report_XinleiZhang.pdf
+    keywords: [Q-Learning, Wall-Following Control]
+  - title: Point-to-Point Kinematic Control of the 3-Joint Robotic Arm in the Presence of Obstacles
+    summary: MAE 589 · Fall 2024
+    video: Course_Projects/NCSU/MAE589-2024Fall/3D_View_MPC.mp4
+    poster: Course_Projects/NCSU/MAE589-2024Fall/3D_View_MPC-Thumbnail.jpg
+    fit: contain
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: Course_Projects/NCSU/MAE589-2024Fall/2024Fall_MAE589_Course_Project_Report.pdf
+      - name: GitHub
+        icon: fontawesome/brands/github
+        url: https://github.com/GuanQinG-GitHub/2024Fall-NCSU-MAE589-006-Project
+    keywords: [Manipulator, Trajectory Optimization]
+  - title: Hand Exoskeleton
+    level: undergrad
+    summary: Spring 2023
+    image: Course_Projects/HandExoskeleton/HandExoskeleton-Thumbnail.jpg
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: https://github.com/GuanQinG-GitHub/SharpShooters/blob/main/docs/Hand_Exoskeleton/Report_Hand_Exoskeleton_SharpShooters.pdf
+      - name: Video
+        icon: fontawesome/brands/bilibili
+        url: https://www.bilibili.com/video/BV1eo4y1u7Z5/
+    keywords: [Design & Manufacturing, Cable-Driven, Gesture Following]
+  - title: Rotating Elves
+    level: undergrad
+    summary: Fall 2022
+    image: Course_Projects/RotatingElves/RotatingElves-Thumbnail.jpg
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: https://github.com/GuanQinG-GitHub/SharpShooters/blob/main/docs/Rotating%20Elves/Report_Rotating_Elves.pdf
+      - name: Poster
+        icon: material/presentation
+        url: https://github.com/GuanQinG-GitHub/SharpShooters/blob/main/docs/Rotating%20Elves/Poster_Rotating_Elves.pdf
+      - name: Video
+        icon: fontawesome/brands/bilibili
+        url: https://www.bilibili.com/video/BV1Uv4y177sV/
+    keywords: [Embedded & Circuit System, System Design & Manufacturing]
+  - title: Automatic Catapult
+    level: undergrad
+    summary: Spring 2022
+    image: Course_Projects/AutomaticCatapult/Catapult.jpg
+    links:
+      - name: Report
+        icon: material/file-document-outline
+        url: https://github.com/GuanQinG-GitHub/SharpShooters/blob/main/docs/Automatic%20Catapult/Final%20Report_SharpShooter.pdf
+      - name: Poster
+        icon: material/presentation
+        url: https://github.com/GuanQinG-GitHub/SharpShooters/blob/main/docs/Automatic%20Catapult/Expo_Poster_by_Sharpshooter.pdf
+      - name: Video
+        icon: fontawesome/brands/weixin
+        url: https://mp.weixin.qq.com/s/6qpO4l388TN4YJ9pF1TaCA
+    keywords: [System Design & Manufacturing]
+
+# "Outreach & Teaching" cards on the home page (same fields as home_projects)
+home_outreach:
+  - title: High School ROS2 Teaching
+    summary: Outreach · 2026 High School Research Program
+    image: Outreach/HighSchool-ROS2.jpg
+    links:
+      - name: ROS2 Tutorial
+        icon: material/book-open-variant
+        url: https://guanqing-github.github.io/ROS2Tutorial/
+  - title: Controls Lab
+    summary: Teaching · MAE 405
+    image: Outreach/CircuitExample.jpg
+    fit: contain
+    description: Building PID controllers using Circuits
+    links:
+      - name: Personal Tutorial
+        icon: material/book-open-variant
+        url: https://github.com/GuanQinG-GitHub/XinleiZhang_Website/tree/main/docs/Course_Notes/NCSU/MAE_405_2024_Fall
+
 theme:
   name: material
   custom_dir: asset # Contains custom 'home.html' coverpage (and 'main.html')
+  font: false # Don't load Google Fonts; Times New Roman is set in extra.css
   
   palette:
     - scheme: default # 日间模式
